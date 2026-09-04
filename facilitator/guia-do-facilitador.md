@@ -2,7 +2,7 @@
 
 ## Objetivo do workshop
 
-Levar participantes a perceber que trabalhar com IA de forma agentic não é principalmente uma questão de escrever prompts melhores. É uma questão de projetar um sistema de trabalho.
+Levar participantes a perceber que trabalhar com IA com agentes não é principalmente uma questão de escrever prompts melhores. É uma questão de projetar um sistema de trabalho.
 
 Ao final, o participante deve conseguir:
 
@@ -27,11 +27,11 @@ A duração pode ser reduzida, mas o exercício de decomposição não deve ser 
 | 0:00–0:20 | O engenheiro brilhante recebe uma tarefa ruim | `00`–`01`, exercício 1 |
 | 0:20–0:45 | O que está faltando? | `02`–`06` |
 | 0:45–1:05 | Ferramentas e ambiente | `07` |
-| 1:05–1:25 | O loop agentic | `08` |
+| 1:05–1:25 | O loop de execução | `08` |
 | 1:25–1:45 | Responsabilidades e especialização | `09` |
 | 1:45–2:05 | Decomposição e paralelismo | exercício 2 |
 | 2:05–2:25 | Desenho de um time de agentes | exercício 3 |
-| 2:25–2:30 | Fechamento | `13` |
+| 2:25–2:30 | Fechamento | `12` |
 
 ## Como conduzir
 
@@ -63,7 +63,7 @@ Quando surgir um agente, pergunte:
 
 ### Evite transformar o workshop em demonstração de ferramenta
 
-Ferramentas são importantes, mas são consequência da arquitetura do trabalho.
+Ferramentas são importantes, mas são consequência da forma como o trabalho foi desenhado.
 
 O objetivo é que o participante consiga aplicar os conceitos mesmo usando outro modelo, outro editor ou outra plataforma amanhã.
 
@@ -73,9 +73,8 @@ Use algumas destas perguntas quando a discussão esfriar:
 
 - O que acontece se o agente não conhecer a arquitetura atual?
 - O que acontece se dois agentes tomarem decisões incompatíveis?
-- Quem decide quando duas soluções tecnicamente corretas entram em conflito?
 - Como sabemos que um agente realmente terminou?
-- Quando dois agentes são paralelismo e quando são apenas duas pessoas editando a mesma coisa?
+- Quando dois agentes representam paralelismo e quando são apenas duas pessoas editando a mesma coisa?
 - O que você não delegaria mesmo tendo um agente excelente?
 - Se trocar o modelo de linguagem amanhã, qual parte do seu sistema continua válida?
 
