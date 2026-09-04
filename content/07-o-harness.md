@@ -82,8 +82,10 @@ Missão         → o que fazer agora
 Harness        → com o que pode trabalhar
 ```
 
-Falta uma propriedade que diferencia um executor automático de um sistema realmente agentic:
+Falta uma propriedade importante: ele precisa conseguir verificar o próprio trabalho e reagir ao resultado.
 
-**ele precisa conseguir verificar o próprio trabalho e reagir ao resultado.**
+## A pergunta do engenheiro novo
 
-Isso nos leva ao loop agentic.
+> “Beleza. Agora eu tenho ambiente, ferramentas e uma missão. Mas como eu sei se o que fiz funcionou? Se der errado, eu paro ou tento outra coisa?”
+
+É isso que vamos explorar no loop de execução.
