@@ -59,9 +59,9 @@ A segunda é muito mais útil para um agente. Ela reduz ambiguidade e aponta par
 
 A primeira expressa uma intenção válida, mas deixa quase tudo para interpretação.
 
-## No nosso engenheiro fictício
+## No nosso engenheiro novo
 
-Agora temos duas camadas:
+Agora temos duas peças:
 
 ```text
 Constituição
@@ -79,4 +79,8 @@ Mas ainda falta uma coisa.
 
 Saber **o que fazer** não significa necessariamente saber **como executar uma tarefa recorrente**.
 
-É aí que entram as Skills.
+## A pergunta do engenheiro novo
+
+> “Beleza. Eu já sei quais regras seguir. Mas quando existe uma atividade que fazemos toda hora, vocês têm algum procedimento para isso ou cada pessoa faz do seu jeito?”
+
+É aí que entram as **Skills**.
