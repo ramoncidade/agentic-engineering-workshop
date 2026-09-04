@@ -87,7 +87,7 @@ Depois pergunte:
 
 > O paralelismo realmente reduz o tempo total ou apenas cria mais coordenação?
 
-Esse ponto é importante. Colocar cinco agentes em uma tarefa que poderia ser resolvida por um agente não é orquestração. É overhead distribuído.
+Às vezes cinco agentes fazem uma tarefa mais devagar do que um. O número de agentes só ajuda quando existe trabalho que pode avançar de forma independente.
 
 ## Parte 5 — Compare as duas abordagens
 
