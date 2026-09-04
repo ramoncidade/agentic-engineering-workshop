@@ -25,7 +25,7 @@ Contexto bom reduz o espaço de soluções erradas.
 
 ## Voltando ao cadastro de usuários
 
-Até aqui, sabemos apenas que queremos criar um cadastro. Agora imagine que o contexto do produto traga algumas informações:
+Até aqui, sabemos apenas que queremos criar um cadastro. Agora imagine que alguém do time explique o cenário:
 
 > O cadastro será usado por clientes de um aplicativo mobile já existente. O aplicativo não pode conhecer credenciais internas. O backend já possui um serviço de identidade. Dados pessoais precisam seguir as políticas de segurança e privacidade da instituição. A plataforma corporativa já fornece observabilidade para os serviços.
 
