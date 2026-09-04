@@ -33,6 +33,14 @@ Uma instrução pode dizer:
 
 A primeira continua válida mesmo que a tecnologia mude. A segunda pode mudar quando o ambiente mudar.
 
+## Voltando ao cadastro
+
+Agora essas regras começam a afetar uma decisão concreta.
+
+Se o cadastro precisar de uma nova integração HTTP, o engenheiro já sabe que não deve simplesmente escrever a chamada e seguir em frente. Ele precisa aplicar os padrões de timeout, observabilidade, testes e tratamento de segredos definidos pela equipe.
+
+O pedido continua sendo o mesmo. O jeito de executá-lo mudou.
+
 ## O problema do excesso de instruções
 
 Existe uma tentação quando começamos a trabalhar com agentes: documentar tudo.
@@ -73,7 +81,7 @@ Instruções
 Como trabalhamos aqui
 ```
 
-Ele já não chega ao projeto apenas com valores abstratos. Começa a conhecer as regras concretas do ambiente.
+O cadastro de usuários já deixou de ser apenas uma frase. O engenheiro começa a ter critérios para escolher como implementá-lo.
 
 Mas ainda falta uma coisa.
 
