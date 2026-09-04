@@ -1,32 +1,30 @@
 # 11 · O trabalho de engenharia
 
-O cadastro de usuários começou como uma frase simples. Agora existe contexto, uma missão clara, decisões registradas, procedimentos, ferramentas e várias frentes de trabalho.
+O cadastro de usuários começou como uma frase simples. Depois ganhou contexto, uma missão clara, decisões registradas, procedimentos, ferramentas e várias frentes de trabalho.
 
-A mudança mais importante deste encontro aparece justamente aqui.
+Chegamos a uma mudança prática na forma de olhar para a entrega.
 
-Antes de pensar em agentes, a pergunta costuma ser:
+No começo, a pergunta era:
 
 > “Como eu faço esta tarefa?”
 
-Agora existe outra pergunta disponível:
+Agora também podemos perguntar:
 
 > “Qual é a melhor forma de organizar esta tarefa para que pessoas e agentes produzam um bom resultado?”
 
 ## Isso não muda o cargo de ninguém
 
-Aqui vale fazer uma distinção importante.
-
 Estamos falando de uma forma de trabalhar, não de uma mudança de cargo ou de responsabilidade formal.
 
-Um engenheiro em qualquer nível pode usar esse jeito de pensar. Às vezes vai executar uma tarefa sozinho. Às vezes vai dividir o trabalho com outros engenheiros. Às vezes vai usar um agente para investigar, implementar ou revisar uma parte do trabalho.
+Um engenheiro em qualquer nível pode usar esse jeito de pensar. Em uma tarefa, pode fazer tudo sozinho. Em outra, pode dividir o trabalho com colegas. Em outra, pode usar um agente para investigar, implementar ou revisar uma parte da entrega.
 
-O ponto é aprender a escolher a melhor forma de organizar o trabalho para cada situação.
+A escolha depende do problema.
 
 ## A engenharia continua no centro
 
-Usar agentes não significa parar de entender o que está sendo construído.
+Usar agentes não significa deixar de entender o que está sendo construído.
 
-No cadastro, por exemplo, ainda precisamos conseguir avaliar:
+No cadastro, alguém ainda precisa conseguir avaliar:
 
 - arquitetura;
 - código;
@@ -37,13 +35,11 @@ No cadastro, por exemplo, ainda precisamos conseguir avaliar:
 - trade-offs;
 - qualidade da entrega.
 
-A diferença é que nem todo passo precisa ser executado diretamente por nós.
+O que muda é quem executa cada parte do trabalho e quanto acompanhamento manual ela exige.
 
-## De executor para multiplicador
+## O que podemos fazer com essa capacidade?
 
-Em alguns trabalhos, podemos medir produtividade pelo que conseguimos produzir diretamente.
-
-Com agentes, aparece outra possibilidade: conseguir produzir mais trabalho de qualidade sem precisar acompanhar manualmente cada passo.
+Olhe novamente para o cadastro:
 
 ```text
 Cadastro de usuários
@@ -67,21 +63,25 @@ Cadastro de usuários
               entrega
 ```
 
-Isso não significa que devemos colocar tudo nas mãos dos agentes. Significa que passamos a ter mais uma opção para organizar o trabalho.
+Algumas dessas atividades podem ser executadas por agentes. Outras podem ser feitas por pessoas. Algumas podem começar em paralelo e outras dependem de uma decisão anterior.
 
-## O que continua sendo humano
-
-Algumas decisões precisam continuar sendo tomadas por pessoas, especialmente quando envolvem contexto de negócio, prioridades, riscos relevantes ou compromissos de longo prazo.
+O ganho não vem simplesmente de colocar mais agentes para trabalhar. Vem de conseguir organizar melhor as fronteiras, as dependências e a validação.
 
 Agentes podem recomendar, investigar, implementar e revisar o trabalho de outro agente.
 
 Mas alguém precisa avaliar as evidências e decidir o que será aceito como resultado.
 
-## A competência que queremos praticar
+## Uma pergunta útil antes de delegar
 
-A competência central deste encontro não é escrever prompts melhores.
+Antes de entregar uma atividade a um agente, vale perguntar:
 
-É aprender a desenhar um trabalho em que contexto, regras, capacidades, ferramentas, pessoas, agentes e validação se encaixem bem.
+> “Se eu delegar isso, o que ainda preciso entender para avaliar o resultado?”
+
+Essa pergunta ajuda a separar execução de julgamento. Também deixa claro onde a participação humana continua necessária.
+
+## O que queremos praticar
+
+A competência central deste encontro é conseguir desenhar um trabalho em que contexto, regras, capacidades, ferramentas, pessoas, agentes e validação se encaixem bem.
 
 Às vezes isso significa usar um agente.
 
