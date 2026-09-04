@@ -14,9 +14,7 @@ Quando voltar, o que você espera encontrar?
 
 Provavelmente não um resultado excelente.
 
-O problema não é a capacidade técnica desse engenheiro. É que ele não sabe quase nada sobre o lugar onde acabou de chegar.
-
-Ele não conhece o produto. Não conhece as restrições. Não sabe quais decisões já foram tomadas. Não conhece os padrões da equipe. Não sabe o que pode mudar e o que não pode. E, principalmente, não sabe como vocês definem que uma solução é boa.
+O problema não é a capacidade técnica desse engenheiro. É que ele acabou de chegar e ainda não conhece o ambiente onde vai trabalhar. Ele não sabe como o produto funciona, quais decisões já foram tomadas, quais restrições existem ou como a equipe avalia uma boa solução.
 
 Essa situação é uma boa porta de entrada para entender agentes de IA.
 
@@ -26,7 +24,7 @@ Um modelo de linguagem pode ter uma capacidade impressionante de raciocínio e g
 
 Um sistema com agentes acrescenta ao modelo aquilo que um engenheiro experiente normalmente acumula ao longo do tempo: contexto, regras, procedimentos, ferramentas, responsabilidades e mecanismos de verificação.
 
-Durante este workshop vamos construir esse sistema aos poucos.
+Durante este encontro vamos construir esse sistema aos poucos.
 
 Primeiro, vamos entender o que falta para aquele engenheiro trabalhar bem.
 
@@ -41,12 +39,12 @@ No final, vamos colocar vários agentes trabalhando em paralelo e voltar à perg
 Vamos usar estes conceitos como nosso vocabulário:
 
 - **Constituição:** como tomamos decisões.
-- **Instructions:** como trabalhamos.
+- **Instruções:** como trabalhamos.
 - **Skills:** como executamos procedimentos recorrentes.
-- **Project Context:** onde estamos e por que estamos fazendo isso.
-- **Mission:** o que precisa ser feito agora.
-- **Agent:** quem assume uma responsabilidade.
+- **Contexto do projeto:** onde estamos e por que estamos fazendo isso.
+- **Missão:** o que precisa ser feito agora.
+- **Agente:** quem assume uma responsabilidade.
 - **Harness:** o ambiente que permite ao agente observar, agir e verificar.
-- **Evidence:** como sabemos que o trabalho ficou bom.
+- **Evidência:** como sabemos que o trabalho ficou bom.
 
 Não vamos memorizar essas palavras por definição. Vamos chegar a elas pela necessidade.
