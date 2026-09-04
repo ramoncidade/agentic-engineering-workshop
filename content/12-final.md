@@ -1,10 +1,16 @@
 # 12 · A mudança de perspectiva
 
-Começamos com um engenheiro brilhante recebendo uma tarefa sem contexto.
+Começamos com um pedido simples:
 
-Terminamos com uma forma diferente de organizar o trabalho.
+> “Crie um cadastro de usuários.”
+
+Terminamos com algo bem diferente. O pedido ganhou princípios para orientar decisões, regras do ambiente, procedimentos reutilizáveis, contexto, uma missão concreta, ferramentas, ciclos de execução, responsabilidades distribuídas e evidências para validar o resultado.
+
+O caminho foi:
 
 ```text
+Pedido inicial
+    ↓
 Constituição
     ↓
 Instruções
@@ -26,6 +32,8 @@ Delegação
 Evidência
     ↓
 Integração
+    ↓
+Cadastro pronto para entrega
 ```
 
 Nada disso elimina a engenharia.
@@ -61,4 +69,4 @@ Depois, siga a investigação:
 9. Onde faz sentido usar um agente?
 10. O que ainda precisa de uma decisão humana?
 
-Se essas perguntas começarem a aparecer naturalmente, o principal aprendizado deste workshop já está acontecendo.
+Se essas perguntas começarem a aparecer naturalmente, o principal aprendizado deste encontro já está acontecendo.
