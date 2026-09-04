@@ -63,7 +63,13 @@ Isso é muito mais útil para um agente do que simplesmente entregar um document
 
 Uma característica importante de um sistema de trabalho com agentes é que o conhecimento relevante não deveria depender da memória de uma única conversa.
 
-Se o agente A começa uma investigação e o agente B continua o trabalho, o contexto essencial precisa estar disponível para B.
+Pense em algo bem comum: você começa uma investigação em um chat, passa um monte de contexto, toma algumas decisões e chega a uma conclusão parcial. No dia seguinte, precisa continuar o trabalho, mas aquela conversa ficou para trás.
+
+Se você precisa reconstruir tudo no próximo chat, começa a acumular contexto como prompts: explicações, decisões e descobertas ficam espalhadas pelas conversas em vez de fazerem parte do trabalho.
+
+O contexto relevante é justamente aquela informação que você queria que o próximo agente soubesse, mas que acabou ficando perdida em outro chat.
+
+Por isso, se o agente A começa uma investigação e o agente B continua o trabalho, o contexto essencial precisa estar disponível para B.
 
 Isso muda a forma como pensamos documentação.
 
