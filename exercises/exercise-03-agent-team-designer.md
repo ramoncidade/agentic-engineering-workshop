@@ -33,7 +33,7 @@ Evite começar com:
 Comece com perguntas como:
 
 - Quem precisa descobrir o que já existe?
-- Quem propõe a arquitetura?
+- Quem propõe alternativas?
 - Quem implementa?
 - Quem valida segurança?
 - Quem verifica qualidade?
@@ -113,12 +113,12 @@ Questões em aberto:
 
 Isso transforma uma sequência de agentes em um sistema de trabalho.
 
-## Etapa 5 — O arquiteto entra em cena
+## Etapa 5 — Quem conduz a entrega entra em cena
 
 Agora responda:
 
-1. Quais decisões continuam com o humano?
-2. Em que pontos o arquiteto precisa intervir?
+1. Quais decisões continuam com uma pessoa?
+2. Em que pontos alguém precisa intervir?
 3. Qual agente pode bloquear a execução de outro?
 4. Qual resultado precisa ser revisado antes de seguir?
 5. O que aconteceria se um agente produzisse um resultado tecnicamente correto, mas incompatível com a estratégia do projeto?
