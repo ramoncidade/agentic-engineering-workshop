@@ -66,10 +66,10 @@ Skills
 
 Agora nosso engenheiro tem valores, regras e procedimentos.
 
-Mas ele ainda poderia entrar em um projeto e perguntar:
+Mas ainda falta colocar tudo isso em uma situação real de trabalho.
 
-> “Tudo bem. Mas qual problema estamos tentando resolver?”
+## A pergunta do engenheiro novo
 
-Precisamos colocar o engenheiro dentro de uma realidade concreta.
+> “Beleza. Eu já sei como vocês decidem, quais regras seguem e alguns procedimentos. Mas qual é o problema que estamos tentando resolver aqui?”
 
 Precisamos de contexto.
