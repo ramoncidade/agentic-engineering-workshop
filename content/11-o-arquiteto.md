@@ -1,14 +1,14 @@
 # 11 · O trabalho de engenharia
 
-A mudança mais importante deste workshop não é aprender uma ferramenta nova.
+O cadastro de usuários começou como uma frase simples. Agora existe contexto, uma missão clara, decisões registradas, procedimentos, ferramentas e várias frentes de trabalho.
 
-É mudar a pergunta.
+A mudança mais importante deste encontro aparece justamente aqui.
 
-Antes:
+Antes de pensar em agentes, a pergunta costuma ser:
 
 > “Como eu faço esta tarefa?”
 
-Depois:
+Agora existe outra pergunta disponível:
 
 > “Qual é a melhor forma de organizar esta tarefa para que pessoas e agentes produzam um bom resultado?”
 
@@ -26,13 +26,13 @@ O ponto é aprender a escolher a melhor forma de organizar o trabalho para cada 
 
 Usar agentes não significa parar de entender o que está sendo construído.
 
-Pelo contrário. Para usar bem um agente, ainda precisamos conseguir avaliar:
+No cadastro, por exemplo, ainda precisamos conseguir avaliar:
 
 - arquitetura;
 - código;
 - segurança;
+- experiência do usuário;
 - operação;
-- produto;
 - custos;
 - trade-offs;
 - qualidade da entrega.
@@ -46,35 +46,25 @@ Em alguns trabalhos, podemos medir produtividade pelo que conseguimos produzir d
 Com agentes, aparece outra possibilidade: conseguir produzir mais trabalho de qualidade sem precisar acompanhar manualmente cada passo.
 
 ```text
-Antes
-
-Eu → tarefa → código
-
-Com agentes
-
-Eu
- │
- ├── objetivo
- ├── prioridades
- ├── decisões
- └── limites
-       │
-       ▼
-    agentes
-       │
-       ├── investigação
-       ├── implementação
-       ├── testes
-       └── revisão
-       │
-       ▼
-    evidências
-       │
-       ▼
-    integração
-       │
-       ▼
-     resultado
+Cadastro de usuários
+        │
+        ├── investigação
+        ├── segurança
+        ├── backend
+        ├── frontend
+        └── testes
+                │
+                ▼
+             revisão
+                │
+                ▼
+             evidências
+                │
+                ▼
+             integração
+                │
+                ▼
+              entrega
 ```
 
 Isso não significa que devemos colocar tudo nas mãos dos agentes. Significa que passamos a ter mais uma opção para organizar o trabalho.
@@ -89,7 +79,7 @@ Mas alguém precisa avaliar as evidências e decidir o que será aceito como res
 
 ## A competência que queremos praticar
 
-A competência central deste workshop não é escrever prompts melhores.
+A competência central deste encontro não é escrever prompts melhores.
 
 É aprender a desenhar um trabalho em que contexto, regras, capacidades, ferramentas, pessoas, agentes e validação se encaixem bem.
 
