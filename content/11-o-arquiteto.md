@@ -1,4 +1,4 @@
-# 11 · O arquiteto
+# 11 · O trabalho de engenharia
 
 A mudança mais importante deste workshop não é aprender uma ferramenta nova.
 
@@ -10,41 +10,47 @@ Antes:
 
 Depois:
 
-> “Qual é a melhor forma de organizar esta tarefa para que humanos e agentes produzam o resultado?”
+> “Qual é a melhor forma de organizar esta tarefa para que pessoas e agentes produzam um bom resultado?”
 
-## O arquiteto não abandona a engenharia
+## Isso não muda o cargo de ninguém
 
-Existe um risco nessa transição: imaginar que o arquiteto passa a apenas distribuir tarefas.
+Aqui vale fazer uma distinção importante.
 
-Não é isso.
+Estamos falando de uma forma de trabalhar, não de uma mudança de cargo ou de responsabilidade formal.
 
-Quanto mais execução é delegada, mais importante fica entender o suficiente para avaliar as decisões e as evidências produzidas.
+Um engenheiro em qualquer nível pode usar esse jeito de pensar. Às vezes vai executar uma tarefa sozinho. Às vezes vai dividir o trabalho com outros engenheiros. Às vezes vai usar um agente para investigar, implementar ou revisar uma parte do trabalho.
 
-O arquiteto continua precisando compreender:
+O ponto é aprender a escolher a melhor forma de organizar o trabalho para cada situação.
+
+## A engenharia continua no centro
+
+Usar agentes não significa parar de entender o que está sendo construído.
+
+Pelo contrário. Para usar bem um agente, ainda precisamos conseguir avaliar:
 
 - arquitetura;
-- sistemas distribuídos;
 - código;
 - segurança;
 - operação;
 - produto;
 - custos;
-- trade-offs.
+- trade-offs;
+- qualidade da entrega.
 
-A diferença é onde ele coloca sua energia.
+A diferença é que nem todo passo precisa ser executado diretamente por nós.
 
 ## De executor para multiplicador
 
-Um executor mede produtividade pelo que consegue produzir diretamente.
+Em alguns trabalhos, podemos medir produtividade pelo que conseguimos produzir diretamente.
 
-Um arquiteto de agentes começa a medir produtividade também pelo que consegue **fazer o sistema produzir com segurança**.
+Com agentes, aparece outra possibilidade: conseguir produzir mais trabalho de qualidade sem precisar acompanhar manualmente cada passo.
 
 ```text
 Antes
 
 Eu → tarefa → código
 
-Depois
+Com agentes
 
 Eu
  │
@@ -57,7 +63,6 @@ Eu
     agentes
        │
        ├── investigação
-       ├── arquitetura
        ├── implementação
        ├── testes
        └── revisão
@@ -72,31 +77,28 @@ Eu
      resultado
 ```
 
+Isso não significa que devemos colocar tudo nas mãos dos agentes. Significa que passamos a ter mais uma opção para organizar o trabalho.
+
 ## O que continua sendo humano
 
-Nem tudo deve ser delegado.
+Algumas decisões precisam continuar sendo tomadas por pessoas, especialmente quando envolvem contexto de negócio, prioridades, riscos relevantes ou compromissos de longo prazo.
 
-Especialmente:
+Agentes podem recomendar, investigar, implementar e revisar o trabalho de outro agente.
 
-- definição do problema;
-- decisões de negócio;
-- prioridades conflitantes;
-- aceitação de riscos importantes;
-- decisões que comprometem a organização por muito tempo;
-- responsabilidade pelo resultado.
+Mas alguém precisa avaliar as evidências e decidir o que será aceito como resultado.
 
-Agentes podem recomendar. Podem investigar. Podem implementar. Podem revisar uns aos outros.
+## A competência que queremos praticar
 
-Mas a organização precisa saber quem é responsável pela decisão final.
+A competência central deste workshop não é escrever prompts melhores.
 
-## A nova competência
+É aprender a desenhar um trabalho em que contexto, regras, capacidades, ferramentas, pessoas, agentes e validação se encaixem bem.
 
-A competência central deixa de ser apenas escrever bons prompts.
+Às vezes isso significa usar um agente.
 
-Passa a ser:
+Às vezes significa usar três.
 
-> **desenhar sistemas de trabalho onde inteligência, ferramentas, contexto, especialização e validação se combinam para produzir resultados confiáveis.**
+E às vezes a melhor decisão continua sendo fazer a tarefa você mesmo.
 
-Essa competência tem muito mais em comum com arquitetura e liderança técnica do que com escrever instruções para um chatbot.
+O importante é saber explicar por quê.
 
 E agora podemos colocar tudo isso em prática.
