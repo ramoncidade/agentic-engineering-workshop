@@ -61,7 +61,7 @@ Isso é muito mais útil para um agente do que simplesmente entregar um document
 
 ## O contexto precisa sobreviver ao agente
 
-Uma característica importante de um sistema agentic é que o conhecimento relevante não deveria depender da memória de uma única conversa.
+Uma característica importante de um sistema de trabalho com agentes é que o conhecimento relevante não deveria depender da memória de uma única conversa.
 
 Se o agente A começa uma investigação e o agente B continua o trabalho, o contexto essencial precisa estar disponível para B.
 
@@ -81,12 +81,12 @@ Instruções
 Skills
     Como executamos atividades recorrentes
         ↓
-Project Context
+Contexto
     Onde estamos e por que
 ```
 
-Falta apenas uma coisa para colocar o engenheiro em movimento:
+## A pergunta do engenheiro novo
 
-> **O que exatamente você quer que ele faça agora?**
+> “Tá. Agora eu sei como vocês trabalham e entendo o problema. O que exatamente vocês querem que eu faça agora?”
 
 Essa é a missão.
