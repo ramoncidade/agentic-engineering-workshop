@@ -12,7 +12,7 @@ Imagine que o time recebeu esta demanda:
 
 O produto precisa funcionar no aplicativo e na web. O backend já existe, mas algumas APIs precisarão ser alteradas. Há requisitos de segurança, observabilidade e testes.
 
-Você é o responsável técnico pela entrega.
+Você está conduzindo a entrega.
 
 A primeira reação costuma ser:
 
@@ -116,7 +116,7 @@ Discuta:
 2. Onde a abordagem B introduz dependências?
 3. Quais resultados precisam ser compartilhados entre agentes?
 4. Quais decisões não deveriam ser delegadas?
-5. O que o arquiteto precisa acompanhar?
+5. O que precisa continuar sendo acompanhado por uma pessoa?
 
 ## O aprendizado
 
