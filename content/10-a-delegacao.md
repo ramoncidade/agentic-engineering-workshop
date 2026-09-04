@@ -47,7 +47,7 @@ Isso cria uma interface entre agentes.
 
 A entrega de um agente não precisa ser apenas código. Pode ser uma decisão, um relatório, uma hipótese validada, uma lista de riscos ou um artefato técnico.
 
-## Paralelismo é uma decisão arquitetural
+## Paralelismo é uma decisão de desenho
 
 Considere:
 
@@ -80,7 +80,7 @@ A implementação espera a decisão.
 
 A integração espera as entregas.
 
-Esse raciocínio é muito parecido com desenho de sistemas distribuídos: dependências, contratos, sincronização e falhas importam.
+Esse raciocínio lembra o desenho de sistemas distribuídos: dependências, contratos, sincronização e falhas importam.
 
 ## O custo da coordenação
 
@@ -94,16 +94,22 @@ Uma pergunta útil antes de criar outro agente é:
 
 Se a resposta for fraca, talvez seja melhor manter um único executor.
 
-## O novo trabalho do arquiteto
+## Enxergar o trabalho inteiro
 
-Quando agentes executam em paralelo, alguém precisa enxergar o sistema inteiro.
+Quando o trabalho é dividido, alguém precisa enxergar o conjunto.
 
-Essa pessoa não precisa saber cada detalhe de cada execução. Precisa saber:
+Não é necessário acompanhar cada detalhe de cada execução. É preciso saber:
 
 - por que o trabalho foi dividido daquela forma;
-- quais decisões são irreversíveis ou caras;
+- quais decisões são caras de reverter;
 - onde estão as dependências;
 - quais evidências são confiáveis;
 - onde existe risco de integração.
 
-É aí que chegamos ao papel central do workshop: **o arquiteto como orquestrador**.
+Isso pode ser feito por quem estiver conduzindo a atividade, independentemente do cargo ou senioridade.
+
+## A pergunta do engenheiro novo
+
+> “Beleza. Já sei dividir o trabalho. Como eu faço para acompanhar as entregas sem virar gargalo de tudo?”
+
+Agora chegamos ao ponto em que a pessoa deixa de olhar apenas para a execução individual e começa a enxergar o trabalho como um sistema.
