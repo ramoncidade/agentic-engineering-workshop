@@ -1,16 +1,16 @@
-# 08 · O loop agentic
+# 08 · O loop de execução
 
 Um chat tradicional tende a seguir esta lógica:
 
 ```text
-Usuário → pergunta → modelo → resposta
+Pessoa → pergunta → modelo → resposta
 ```
 
-O trabalho agentic acrescenta um ciclo.
+Quando colocamos o modelo dentro de um ambiente de trabalho, podemos acrescentar um ciclo.
 
 ```text
         ┌──────────┐
-        │  Observar │
+        │ Observar │
         └────┬─────┘
              ↓
         ┌──────────┐
@@ -69,7 +69,7 @@ Por isso precisamos de condições como:
 
 Autonomia não significa ausência de controle.
 
-## A parte mais importante é o “verificar”
+## A parte mais importante é verificar
 
 Gerar código não prova que o código funciona.
 
@@ -93,16 +93,18 @@ Próxima ação
 
 É essa retroalimentação que transforma uma sequência de respostas em um processo de trabalho.
 
-## E onde entra o humano?
+## E onde entra a pessoa?
 
-O humano não desaparece do loop.
+A pessoa não desaparece do loop.
 
-Ele define objetivos, estabelece limites, resolve ambiguidades importantes e assume a responsabilidade pelas decisões que não devem ser delegadas.
+Ela define objetivos, estabelece limites, resolve ambiguidades importantes e assume as decisões que não devem ser delegadas.
 
 O objetivo não é criar uma máquina que nunca precise de nós.
 
-É parar de gastar nosso tempo em cada passo mecânico quando podemos concentrá-lo nas decisões que realmente importam.
+É parar de gastar tempo em cada passo mecânico quando podemos concentrá-lo nas decisões que realmente importam.
 
-Agora podemos introduzir a próxima mudança de escala:
+## A pergunta do engenheiro novo
 
-> **E se o problema for grande demais para um único agente?**
+> “Tá. Entendi como um agente consegue trabalhar sozinho por alguns passos. Mas e quando o problema é grande demais para um agente só? Aí eu divido o trabalho?”
+
+É isso que vamos explorar agora.
