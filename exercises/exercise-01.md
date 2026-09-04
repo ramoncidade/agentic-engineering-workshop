@@ -45,6 +45,8 @@ O ponto é perceber que o contexto **reduziu o espaço de soluções possíveis*
 
 ## Fechamento
 
+Aqui o exemplo muda de propósito. No conteúdo principal, acompanhamos um cadastro de usuários do começo ao fim. Agora vamos usar um problema diferente para verificar se o grupo consegue aplicar o mesmo raciocínio sem depender daquele exemplo.
+
 Apresente a primeira parte da taxonomia:
 
 ```text
