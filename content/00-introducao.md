@@ -24,7 +24,7 @@ Essa situação é uma boa porta de entrada para entender agentes de IA.
 
 Um modelo de linguagem pode ter uma capacidade impressionante de raciocínio e geração de código. Mas capacidade cognitiva, sozinha, não define uma forma confiável de trabalhar.
 
-Um sistema agentic acrescenta ao modelo aquilo que um engenheiro experiente normalmente acumula ao longo do tempo: contexto, regras, procedimentos, ferramentas, responsabilidades e mecanismos de verificação.
+Um sistema com agentes acrescenta ao modelo aquilo que um engenheiro experiente normalmente acumula ao longo do tempo: contexto, regras, procedimentos, ferramentas, responsabilidades e mecanismos de verificação.
 
 Durante este workshop vamos construir esse sistema aos poucos.
 
@@ -34,13 +34,13 @@ Depois vamos transformar essas necessidades em uma estrutura que agentes consegu
 
 No final, vamos colocar vários agentes trabalhando em paralelo e voltar à pergunta mais importante:
 
-**O que passa a ser responsabilidade do humano quando a execução deixa de ser o principal gargalo?**
+**O que continua sendo responsabilidade da pessoa quando a execução deixa de ser o principal gargalo?**
 
 ## O mapa
 
 Vamos usar estes conceitos como nosso vocabulário:
 
-- **Constitution:** como tomamos decisões.
+- **Constituição:** como tomamos decisões.
 - **Instructions:** como trabalhamos.
 - **Skills:** como executamos procedimentos recorrentes.
 - **Project Context:** onde estamos e por que estamos fazendo isso.
