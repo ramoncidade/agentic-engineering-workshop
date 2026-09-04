@@ -10,9 +10,13 @@ Essa pergunta é diferente de “qual tecnologia vocês usam?”.
 
 Tecnologia é uma escolha concreta. O que interessa aqui é o princípio que orienta a escolha.
 
-## Um exemplo
+## Voltando ao cadastro de usuários
 
-Imagine que existem duas formas de implementar uma funcionalidade.
+No nosso exemplo, já sabemos que queremos criar um cadastro de usuários. Mas ainda existem muitas decisões abertas.
+
+Onde os dados serão armazenados? O cadastro precisa nascer junto com uma conta autenticada? Podemos criar uma nova dependência? Como equilibramos velocidade de entrega, simplicidade e facilidade de evolução?
+
+Imagine que existam duas formas de implementar uma parte da funcionalidade.
 
 A primeira é rápida, mas cria uma dependência difícil de remover.
 
@@ -39,7 +43,7 @@ Ela responde perguntas como:
 - Quais trade-offs aceitamos?
 - O que fazemos quando dois objetivos entram em conflito?
 
-Uma boa Constituição é curta. Se ela precisar explicar todos os detalhes da implementação, provavelmente estamos colocando Instructions ou Skills no lugar errado.
+Uma boa Constituição é curta. Se ela precisar explicar todos os detalhes da implementação, provavelmente estamos colocando Instruções ou Skills no lugar errado.
 
 ## Por que isso importa para agentes?
 
@@ -61,6 +65,6 @@ Se a frase só puder ser aplicada a uma tecnologia específica, tente novamente.
 
 ## A pergunta do engenheiro novo
 
-> “Entendi como vocês tomam decisões. Mas como vocês trabalham no dia a dia? Tem alguma regra que eu preciso conhecer antes de começar?”
+> “Entendi como vocês tomam decisões. Mas como vocês trabalham no dia a dia? Tem alguma regra que eu preciso conhecer antes de continuar o cadastro?”
 
-Isso nos leva às **Instructions**.
+Isso nos leva às **Instruções**.
