@@ -10,22 +10,33 @@ Um engenheiro experiente também não trabalha assim. Ele conversa com especiali
 
 Podemos fazer algo parecido com agentes.
 
-## Especialização por responsabilidade
+## O cadastro começou a crescer
 
-Em vez de criar agentes chamados “Java”, “Kafka” ou “Frontend”, pense em responsabilidades:
+Nossa missão agora envolve backend, experiência no cliente, segurança e testes. Um único agente poderia tentar fazer tudo, mas talvez não seja a melhor forma de organizar o trabalho.
+
+Podemos separar responsabilidades:
 
 ```text
-              Objetivo
-                 │
-        ┌────────┼────────┐
-        ↓        ↓        ↓
-   Arquitetura Implementação Testes
-    Review       Agent      Agent
-        │        │        │
-        └────────┼────────┘
-                 ↓
-             Integração
+              Cadastro de usuários
+                       │
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+     Backend        Frontend       Segurança
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+                     Testes
+                       ↓
+                    Revisão
 ```
+
+O desenho exato depende do problema. O ponto é que cada agente recebe uma responsabilidade clara.
+
+## Especialização por responsabilidade
+
+Em vez de criar agentes chamados “Java”, “Kafka” ou “Frontend”, pense em responsabilidades.
+
+Um agente pode ser responsável por implementar o backend do cadastro. Outro pode investigar riscos de segurança. Outro pode avaliar a estratégia de testes.
 
 O nome da tecnologia pode mudar. A responsabilidade continua fazendo sentido.
 
@@ -55,21 +66,17 @@ Se uma tarefa depende de uma decisão que ainda não foi tomada, mandar três ag
 
 Paralelismo funciona quando existem **fronteiras relativamente independentes**.
 
-## Uma possível divisão
-
-Imagine uma mudança de arquitetura.
+## Uma possível divisão para o cadastro
 
 Podemos ter:
 
-- um agente descobrindo o contexto atual;
-- um agente propondo alternativas;
+- um agente descobrindo detalhes do fluxo atual;
 - um agente analisando riscos de segurança;
-- um agente avaliando estratégia de testes;
-- um agente preparando a implementação depois que a direção estiver definida.
+- um agente propondo a estratégia de testes;
+- um agente preparando a implementação do backend;
+- um agente preparando a experiência no cliente, quando o contrato estiver definido.
 
 Algumas dessas atividades podem ocorrer em paralelo. Outras precisam esperar uma decisão anterior.
-
-O trabalho passa a ser um grafo de dependências, não uma fila de prompts.
 
 ## A responsabilidade continua sendo humana
 
@@ -86,6 +93,6 @@ A pessoa que conduz a atividade ainda precisa entender:
 
 ## A pergunta do engenheiro novo
 
-> “Entendi. Então posso dividir o trabalho entre agentes. Mas como eu decido o que cada um recebe e em que ordem eles trabalham?”
+> “Entendi. Posso dividir o cadastro entre agentes. Mas como eu decido o que cada um recebe e em que ordem eles trabalham?”
 
 É isso que vamos explorar na delegação.
