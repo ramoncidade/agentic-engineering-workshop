@@ -4,7 +4,7 @@ Começamos com um pedido simples:
 
 > “Crie um cadastro de usuários.”
 
-Terminamos com algo bem diferente. O pedido ganhou princípios para orientar decisões, regras do ambiente, procedimentos reutilizáveis, contexto, uma missão concreta, ferramentas, ciclos de execução, responsabilidades distribuídas e evidências para validar o resultado.
+Ao longo do encontro, esse pedido ganhou princípios para orientar decisões, regras do ambiente, procedimentos reutilizáveis, contexto, uma missão concreta, ferramentas, ciclos de execução, responsabilidades distribuídas e evidências para validar o resultado.
 
 O caminho foi:
 
@@ -38,13 +38,13 @@ Cadastro pronto para entrega
 
 Nada disso elimina a engenharia.
 
-Na verdade, a ideia é tirar da nossa frente parte do trabalho mecânico para que possamos dedicar mais atenção ao que exige julgamento.
+Na prática, algumas etapas que antes dependiam diretamente de uma pessoa podem passar a ser executadas por agentes. A pessoa continua entendendo o problema, tomando decisões importantes e avaliando o resultado.
 
-A pergunta final não é:
+A pergunta final não precisa ser:
 
 > “Quantos agentes eu consigo rodar?”
 
-É:
+Uma pergunta mais útil é:
 
 > **“Que sistema de trabalho preciso montar para resolver este problema melhor?”**
 
@@ -69,4 +69,4 @@ Depois, siga a investigação:
 9. Onde faz sentido usar um agente?
 10. O que ainda precisa de uma decisão humana?
 
-Se essas perguntas começarem a aparecer naturalmente, o principal aprendizado deste encontro já está acontecendo.
+Não é preciso responder tudo com a mesma profundidade em toda tarefa. A ideia é que essas perguntas passem a fazer parte do seu repertório quando você estiver decidindo como trabalhar.
