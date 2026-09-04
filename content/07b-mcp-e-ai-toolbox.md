@@ -19,18 +19,19 @@ Na prática, ele permite que o harness disponibilize para o agente capacidades q
              │   Harness   │
              └──────┬──────┘
                     │
-               MCP Server
           ┌─────────┼─────────┐
           ↓         ↓         ↓
-       GitHub    Banco     AI Toolbox
-       APIs      Docs      Knowledge
+        MCP       MCP       MCP
+       Server    Server    Server
+          │         │         │
+       GitHub     Banco    AI Toolbox
 ```
 
 O ponto importante é:
 
 > **MCP não é o conhecimento. É um mecanismo padronizado para disponibilizar conhecimento e capacidades ao agente.**
 
-Ele pode ser uma das pontes entre o harness e sistemas externos.
+Ele pode ser uma das pontes entre o harness e sistemas externos. Não precisa existir um único MCP Server para tudo.
 
 ## E onde entra a AI Toolbox?
 
