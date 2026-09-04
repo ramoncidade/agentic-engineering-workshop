@@ -32,7 +32,7 @@ Perceba o que aconteceu.
 
 Você não aumentou a inteligência do engenheiro. Você aumentou a quantidade de informação e de regras disponíveis para ele tomar decisões.
 
-Esse é o primeiro princípio do workshop:
+Esse é um dos pontos centrais do workshop:
 
 > **Um profissional excelente ainda precisa de um ambiente de trabalho bem definido.**
 
@@ -48,8 +48,8 @@ O **agente** é essa capacidade colocada dentro de uma responsabilidade e de um 
 
 Essa diferença parece pequena no começo. Ela fica importante quando começamos a colocar mais de um agente para trabalhar no mesmo problema.
 
-## Próxima pergunta
+## A pergunta do engenheiro novo
 
-Se o engenheiro precisa de valores, regras, conhecimento, contexto e uma missão clara, como organizamos tudo isso?
+> “Beleza. Entendi que eu preciso de mais do que a tarefa. Mas como vocês organizam tudo isso para eu saber como tomar decisões e trabalhar aqui?”
 
-É aqui que entra a nossa primeira peça: a **Constitution**.
+É aqui que entra a nossa primeira peça: a **Constituição**.
