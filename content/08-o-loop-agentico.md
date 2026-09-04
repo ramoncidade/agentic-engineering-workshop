@@ -6,7 +6,7 @@ Um chat tradicional tende a seguir esta lógica:
 Pessoa → pergunta → modelo → resposta
 ```
 
-Quando colocamos o modelo dentro de um ambiente de trabalho, podemos acrescentar um ciclo.
+Quando colocamos o modelo dentro de um ambiente de trabalho, o fluxo pode continuar depois da primeira resposta.
 
 ```text
         ┌──────────┐
@@ -91,7 +91,7 @@ Decisão
 Próxima ação
 ```
 
-É essa retroalimentação que transforma uma sequência de respostas em um processo de trabalho.
+Essa retroalimentação é o que permite continuar o trabalho sem tratar a primeira resposta como resultado final.
 
 ## E onde entra a pessoa?
 
@@ -101,7 +101,7 @@ Ela define objetivos, estabelece limites, resolve ambiguidades importantes e ass
 
 O objetivo não é criar uma máquina que nunca precise de nós.
 
-É parar de gastar tempo em cada passo mecânico quando podemos concentrá-lo nas decisões que realmente importam.
+É evitar gastar tempo acompanhando cada passo mecânico quando podemos concentrá-lo nas decisões que realmente importam.
 
 ## A pergunta do engenheiro novo
 
