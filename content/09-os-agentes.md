@@ -4,11 +4,11 @@ Até aqui, falamos de um agente como um único executor.
 
 Agora aparece uma pergunta natural:
 
-> Por que colocar todo o trabalho nas mãos de um único agente?
+> “Por que colocar todo o trabalho nas mãos de um único agente?”
 
-Um engenheiro experiente também não trabalha assim. Ele conversa com especialistas, pede uma segunda opinião, delega tarefas e revisa entregas.
+Um engenheiro experiente também não trabalha assim. Ele conversa com especialistas, pede uma segunda opinião, divide trabalho e revisa entregas.
 
-Um sistema agentic pode fazer algo parecido.
+Podemos fazer algo parecido com agentes.
 
 ## Especialização por responsabilidade
 
@@ -20,7 +20,7 @@ Em vez de criar agentes chamados “Java”, “Kafka” ou “Frontend”, pens
         ┌────────┼────────┐
         ↓        ↓        ↓
    Arquitetura Implementação Testes
-    Reviewer      Agent      Agent
+    Review       Agent      Agent
         │        │        │
         └────────┼────────┘
                  ↓
@@ -51,7 +51,7 @@ Mais agentes não significam automaticamente mais velocidade.
 
 Se cinco agentes precisam editar o mesmo arquivo, provavelmente criamos cinco fontes de conflito.
 
-Se uma tarefa depende de uma decisão arquitetural ainda não tomada, mandar três agentes implementarem soluções diferentes pode produzir apenas desperdício.
+Se uma tarefa depende de uma decisão que ainda não foi tomada, mandar três agentes implementarem soluções diferentes pode produzir apenas retrabalho.
 
 Paralelismo funciona quando existem **fronteiras relativamente independentes**.
 
@@ -71,19 +71,21 @@ Algumas dessas atividades podem ocorrer em paralelo. Outras precisam esperar uma
 
 O trabalho passa a ser um grafo de dependências, não uma fila de prompts.
 
-## O arquiteto continua existindo
+## A responsabilidade continua sendo humana
 
-Delegar execução não significa delegar responsabilidade.
+Delegar uma parte do trabalho não significa deixar de responder pelo resultado.
 
-O humano ainda precisa decidir:
+A pessoa que conduz a atividade ainda precisa entender:
 
-- qual problema vale a pena resolver;
+- qual problema está sendo resolvido;
 - quais restrições são importantes;
-- qual direção arquitetural aceitar;
-- quando evidência é suficiente;
+- quais alternativas fazem sentido;
+- quando a evidência é suficiente;
 - qual risco é aceitável;
-- quando interromper um agente.
+- quando interromper ou redirecionar um agente.
 
-O papel muda de executor principal para **orquestrador e responsável pelas decisões**.
+## A pergunta do engenheiro novo
 
-E essa é a transição que interessa neste workshop.
+> “Entendi. Então posso dividir o trabalho entre agentes. Mas como eu decido o que cada um recebe e em que ordem eles trabalham?”
+
+É isso que vamos explorar na delegação.
