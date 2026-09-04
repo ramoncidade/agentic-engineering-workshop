@@ -8,7 +8,7 @@ Pode ser um procedimento técnico, uma forma de investigar um problema ou uma se
 
 ## Pense em procedimento, não em conhecimento
 
-Imagine uma Skill chamada `revisar-api`.
+Voltando ao cadastro de usuários, imagine que a equipe tenha uma Skill chamada `revisar-api`.
 
 Ela pode orientar o agente a:
 
@@ -18,6 +18,8 @@ Ela pode orientar o agente a:
 4. avaliar timeout, retry e observabilidade;
 5. executar os testes relevantes;
 6. registrar problemas encontrados.
+
+Quando a API do cadastro estiver pronta, qualquer agente que precise revisá-la pode seguir esse mesmo procedimento.
 
 Isso é diferente de simplesmente dizer:
 
@@ -64,12 +66,12 @@ Skills
     Como executamos uma atividade recorrente
 ```
 
-Agora nosso engenheiro tem valores, regras e procedimentos.
+O cadastro já tem princípios para as decisões, regras para o ambiente e procedimentos que podem ser reutilizados.
 
-Mas ainda falta colocar tudo isso em uma situação real de trabalho.
+Agora nosso engenheiro precisa entender o projeto em que essa funcionalidade vai existir.
 
 ## A pergunta do engenheiro novo
 
-> “Beleza. Eu já sei como vocês decidem, quais regras seguem e alguns procedimentos. Mas qual é o problema que estamos tentando resolver aqui?”
+> “Beleza. Eu já sei como vocês decidem, quais regras seguem e alguns procedimentos. Mas qual é o problema que estamos tentando resolver com esse cadastro?”
 
 Precisamos de contexto.
