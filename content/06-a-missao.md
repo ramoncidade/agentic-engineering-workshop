@@ -8,6 +8,20 @@ A missão é o pedido concreto que coloca o trabalho em movimento.
 
 Um bom contexto não substitui uma boa missão. E uma missão detalhada não compensa a ausência de contexto.
 
+## Voltando ao cadastro
+
+Agora temos contexto suficiente para transformar o pedido inicial em uma missão de trabalho.
+
+Em vez de simplesmente:
+
+> “Crie um cadastro de usuários.”
+
+podemos chegar a algo como:
+
+> “Implemente a jornada de cadastro de usuários para o aplicativo atual, reutilizando o serviço de identidade existente. O cliente não pode receber credenciais internas. Preserve os contratos existentes e siga os padrões de segurança e observabilidade do projeto. A entrega deve incluir API, validações, tratamento dos principais erros e testes necessários para comprovar o fluxo.”
+
+Ainda podemos descobrir detalhes durante a execução. A diferença é que agora existe um resultado esperado e limites claros.
+
 ## Missão não é um prompt mágico
 
 Quando falamos de IA, é comum imaginar que existe uma formulação perfeita capaz de fazer o modelo produzir o resultado certo.
@@ -39,21 +53,21 @@ Não é necessário escrever tudo isso toda vez. A quantidade de informação de
 
 **Pedido A**
 
-> “Melhore o endpoint de pagamentos.”
+> “Crie um cadastro de usuários.”
 
 **Pedido B**
 
-> “Reduza a latência do endpoint de pagamentos. Preserve o contrato atual. Não altere o mecanismo de autenticação. Investigue primeiro onde está o gargalo. Considere a mudança concluída quando o P95 ficar abaixo de 400 ms nos testes de carga existentes e não houver regressão funcional.”
+> “Implemente a jornada de cadastro de usuários no aplicativo atual. Reutilize o serviço de identidade existente, preserve os contratos atuais e não exponha credenciais internas ao cliente. Inclua validações, tratamento de erros e testes do fluxo principal. Considere a entrega concluída quando o fluxo puder ser executado de ponta a ponta e as validações definidas pelo projeto estiverem passando.”
 
 O segundo pedido não é melhor porque tem mais palavras.
 
-Ele é melhor porque transforma uma intenção vaga em um resultado observável.
+Ele é melhor porque transforma uma intenção vaga em um resultado observável e deixa explícitas as principais restrições.
 
 ## Uma missão também pode ser pequena
 
 Uma missão para um agente pode ser:
 
-> “Analise este PR e encontre riscos de compatibilidade. Não altere arquivos. Entregue os riscos classificados por severidade e indique como validaria cada um.”
+> “Analise a API do cadastro e encontre riscos de compatibilidade. Não altere arquivos. Entregue os riscos classificados por severidade e indique como validaria cada um.”
 
 Observe que a missão também define limites. O agente não foi convidado a corrigir o código.
 
@@ -61,19 +75,21 @@ Isso é importante quando existem vários agentes trabalhando juntos.
 
 ## Missões compõem trabalho maior
 
-Uma demanda grande pode ser decomposta:
+O cadastro de usuários parece uma única funcionalidade para quem olha de fora. Na execução, pode envolver várias frentes:
 
 ```text
-Missão principal
+Cadastro de usuários
        │
-       ├── descobrir contexto
-       ├── propor arquitetura
-       ├── implementar
+       ├── entender contexto existente
+       ├── definir fluxo e contratos
+       ├── implementar backend
+       ├── implementar experiência no cliente
+       ├── analisar segurança
        ├── criar testes
-       └── revisar riscos
+       └── revisar a entrega
 ```
 
-Cada parte pode receber uma missão própria.
+Cada parte pode receber uma missão própria quando houver uma boa fronteira de responsabilidade.
 
 É aqui que começamos a sair do modelo “uma pessoa conversa com uma IA” e entramos no modelo “um sistema organiza trabalho entre executores”.
 
