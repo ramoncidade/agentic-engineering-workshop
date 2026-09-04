@@ -23,19 +23,17 @@ O que importa é conseguir responder perguntas como:
 
 Contexto bom reduz o espaço de soluções erradas.
 
-## O mesmo pedido pode gerar soluções diferentes
+## Voltando ao cadastro de usuários
 
-Imagine que a missão seja:
+Até aqui, sabemos apenas que queremos criar um cadastro. Agora imagine que o contexto do produto traga algumas informações:
 
-> “Crie uma API para consultar pedidos.”
+> O cadastro será usado por clientes de um aplicativo mobile já existente. O aplicativo não pode conhecer credenciais internas. O backend já possui um serviço de identidade. Dados pessoais precisam seguir as políticas de segurança e privacidade da instituição. A plataforma corporativa já fornece observabilidade para os serviços.
 
-Sem contexto, o agente pode escolher praticamente qualquer arquitetura.
+De repente, várias decisões que pareciam abertas deixam de ser tão abertas.
 
-Agora acrescente:
+Talvez não faça sentido criar outro mecanismo de identidade. Talvez o frontend precise seguir um fluxo já existente. Talvez determinadas informações nem devam ser armazenadas pelo novo serviço.
 
-> A API será usada por um aplicativo mobile já existente. O backend precisa suportar picos de tráfego. O cliente não pode conhecer credenciais internas. Existe um BFF responsável pelas regras de negócio e há uma plataforma corporativa de observabilidade.
-
-A tarefa continua sendo “criar uma API”, mas o espaço de decisão mudou completamente.
+O pedido continua sendo “criar um cadastro de usuários”, mas o espaço de soluções mudou completamente.
 
 ## Contexto também inclui o que não fazer
 
@@ -45,15 +43,15 @@ Por exemplo:
 
 ```text
 Objetivo
-    Reduzir o tempo de resposta da jornada
+    Permitir que um cliente crie sua conta pelo aplicativo
 
 Restrições
-    Não alterar o contrato público
-    Não adicionar uma nova base de dados
-    Manter compatibilidade com o aplicativo atual
+    Não armazenar credenciais no aplicativo
+    Reutilizar o serviço de identidade existente
+    Manter compatibilidade com a jornada atual
 
 Sucesso
-    P95 abaixo de 300 ms
+    Cadastro concluído com validações de segurança
     Testes de regressão passando
 ```
 
@@ -69,7 +67,7 @@ Se você precisa reconstruir tudo no próximo chat, começa a acumular contexto 
 
 O contexto relevante é justamente aquela informação que você queria que o próximo agente soubesse, mas que acabou ficando perdida em outro chat.
 
-Por isso, se o agente A começa uma investigação e o agente B continua o trabalho, o contexto essencial precisa estar disponível para B.
+Por isso, se o agente A começa uma investigação sobre o cadastro e o agente B continua o trabalho, o contexto essencial precisa estar disponível para B.
 
 Isso muda a forma como pensamos documentação.
 
@@ -91,8 +89,10 @@ Contexto
     Onde estamos e por que
 ```
 
+O cadastro de usuários já tem um problema definido, algumas restrições e decisões que precisam ser respeitadas.
+
 ## A pergunta do engenheiro novo
 
-> “Tá. Agora eu sei como vocês trabalham e entendo o problema. O que exatamente vocês querem que eu faça agora?”
+> “Tá. Agora eu sei como vocês trabalham e entendo o problema. O que exatamente vocês querem que eu entregue nesse cadastro?”
 
 Essa é a missão.
