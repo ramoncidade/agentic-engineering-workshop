@@ -4,7 +4,7 @@ Finalmente chegamos à pergunta que iniciou tudo:
 
 > **O que precisa ser feito?**
 
-A missão é o pedido concreto que coloca o sistema para trabalhar.
+A missão é o pedido concreto que coloca o trabalho em movimento.
 
 Um bom contexto não substitui uma boa missão. E uma missão detalhada não compensa a ausência de contexto.
 
@@ -75,10 +75,10 @@ Missão principal
 
 Cada parte pode receber uma missão própria.
 
-É aqui que começamos a sair do modelo “um usuário conversa com uma IA” e entramos no modelo “um sistema organiza trabalho entre executores”.
+É aqui que começamos a sair do modelo “uma pessoa conversa com uma IA” e entramos no modelo “um sistema organiza trabalho entre executores”.
 
-Mas ainda existe uma peça importante.
+## A pergunta do engenheiro novo
 
-Nosso engenheiro tem cérebro, princípios, regras, habilidades, contexto e uma missão.
+> “Beleza. Agora eu tenho contexto e sei qual é a missão. Com o que eu consigo trabalhar aqui? Onde estão meus arquivos, ferramentas e testes?”
 
-Agora precisamos colocá-lo em um ambiente onde ele consiga **observar, agir, usar ferramentas e verificar o que fez**.
+Nosso engenheiro já sabe o que fazer. Agora precisamos dar a ele um ambiente para executar o trabalho.
