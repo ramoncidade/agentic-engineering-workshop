@@ -105,6 +105,6 @@ O objetivo não é criar uma máquina que nunca precise de nós.
 
 ## A pergunta do engenheiro novo
 
-> “Tá. Entendi como um agente consegue trabalhar sozinho por alguns passos. Mas e quando o problema é grande demais para um agente só? Aí eu divido o trabalho?”
+> “E se ficar grande demais pra fazer sozinho? Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”
 
 É isso que vamos explorar agora.
