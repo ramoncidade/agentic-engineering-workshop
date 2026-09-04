@@ -35,6 +35,8 @@ Na prática, as fronteiras entre esses termos variam conforme a ferramenta. O ob
 
 ## O que o harness permite
 
+No cadastro de usuários, por exemplo, nosso agente pode precisar acessar o repositório, localizar o serviço de identidade existente, editar código, executar testes e consultar documentação. Se houver frontend, pode também precisar de um navegador ou de ferramentas específicas do projeto.
+
 Um agente de desenvolvimento pode precisar de:
 
 - sistema de arquivos;
@@ -71,7 +73,7 @@ E passa a ser:
 
 ## Agora ele consegue trabalhar
 
-Nosso engenheiro possui:
+Nosso cadastro de usuários possui:
 
 ```text
 Constituição   → como decidir
