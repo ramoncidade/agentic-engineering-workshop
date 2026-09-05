@@ -16,6 +16,8 @@
 - O personagem principal é um engenheiro humano; agentes entram progressivamente conforme o trabalho exige.
 - Nomes e identidade visual dos personagens ainda não estão definidos.
 - A narrativa deve evitar infantilização. O humor pode aparecer nos personagens e situações, sem transformar o encontro em uma paródia.
+- MCP deve ser apresentado como conceito geral de integração entre agentes e ferramentas/fontes, não como vitrine da AI Toolbox.
+- A AI Toolbox aparece como **um exemplo** de infraestrutura de conhecimento que pode ser acessada por um agente, ao lado de outras fontes como Figma, Jira e GitHub.
 
 ---
 
@@ -209,9 +211,98 @@ Pausa. Deixar a pergunta existir antes de apresentar o conceito.
 
 ---
 
-# Ato 7 · Com o que eu consigo trabalhar?
+# Ato 7 · Não quero depender da memória
 
 ## Cena 08 · A pergunta seguinte
+
+**Slide:**
+
+> **“Preciso lembrar tudo isso sozinho toda vez que for fazer alguma demanda?”**
+
+**Objetivo:** introduzir conhecimento persistente e reutilizável como resposta a uma necessidade natural do engenheiro.
+
+### Resposta
+
+# Conhecimento centralizado
+
+**Slide de apoio:**
+
+```text
+             CONHECIMENTO
+                   │
+        ┌──────────┼──────────┐
+        ↓          ↓          ↓
+   Constitution  Skills    Contexto
+        │          │          │
+        └──────────┼──────────┘
+                   ↓
+          Base de conhecimento
+```
+
+**Mensagem:**
+
+> **Conhecimento reutilizável, disponível quando necessário.**
+
+**Notas:** explicar que informação recorrente não precisa ser repetida em cada prompt. Pode ser armazenada e recuperada conforme a necessidade do trabalho.
+
+---
+
+## Cena 09 · Um exemplo de infraestrutura
+
+**Slide:**
+
+# AI Toolbox
+
+> **Uma infraestrutura reutilizável para organizar e disponibilizar conhecimento aos agentes.**
+
+`Constituições · Instructions · Skills · Agents · Contexto · Conhecimento técnico`
+
+**Notas:** apresentar a AI Toolbox como exemplo concreto do padrão, não como requisito da arquitetura. O conceito continua válido com qualquer base de conhecimento adequada.
+
+---
+
+## Cena 10 · Como o agente conversa com essas fontes?
+
+**Slide:**
+
+> **“Tá. Mas como o agente acessa essas fontes?”**
+
+### Resposta
+
+# MCP
+
+```text
+                    AGENTE
+                       │
+                    Harness
+                       │
+             ┌─────────┼─────────┐
+             ↓         ↓         ↓
+            MCP       MCP       MCP
+             │         │         │
+          Figma      Jira    AI Toolbox
+             │         │         │
+             ↓         ↓         ↓
+          Design    Trabalho  Conhecimento
+```
+
+**Mensagem:**
+
+> **MCP conecta o agente às ferramentas e fontes que ele precisa usar.**
+
+**Notas:** deixar claro que MCP é uma interface/protocolo de integração, não uma base de conhecimento. Figma, Jira, GitHub, bancos de dados, observabilidade e AI Toolbox são exemplos de fontes ou ferramentas que podem ser conectadas. Não apresentar a AI Toolbox como objetivo do encontro.
+
+**Distinção didática:**
+
+> “Se a Toolbox é uma enciclopédia, o MCP é a interface pela qual o agente pede o artigo que precisa.”
+
+**Observação:** esta cena pode receber um aprofundamento técnico opcional de poucos minutos, sem ser necessária para a narrativa principal.
+
+---
+
+# Ato 8 · Com o que eu consigo trabalhar?
+
+## Cena 11 · A pergunta seguinte
 
 **Slide:**
 
@@ -233,13 +324,13 @@ Pausa. Deixar a pergunta existir antes de apresentar o conceito.
       API        Issues      Pipeline
 ```
 
-**Notas:** diferenciar LLM, agente e harness; introduzir limites de acesso e aprovação.
+**Notas:** diferenciar LLM, agente e harness; introduzir limites de acesso e aprovação. O MCP apresentado anteriormente é uma das formas pelas quais o harness pode disponibilizar integração com fontes e ferramentas.
 
 ---
 
-# Ato 8 · Como sei que funcionou?
+# Ato 9 · Como sei que funcionou?
 
-## Cena 09 · A pergunta seguinte
+## Cena 12 · A pergunta seguinte
 
 **Slide:**
 
@@ -271,9 +362,9 @@ VERIFY
 
 ---
 
-# Ato 9 · Posso pedir ajuda?
+# Ato 10 · Posso pedir ajuda?
 
-## Cena 10 · O problema ficou grande
+## Cena 13 · O problema ficou grande
 
 **Slide:**
 
@@ -289,9 +380,9 @@ VERIFY
 
 ---
 
-# Ato 10 · Quem assume cada responsabilidade?
+# Ato 11 · Quem assume cada responsabilidade?
 
-## Cena 11 · Por que mais de um agente?
+## Cena 14 · Por que mais de um agente?
 
 **Slide:**
 
@@ -315,7 +406,7 @@ VERIFY
 
 ---
 
-## Cena 12 · Como dividir?
+## Cena 15 · Como dividir?
 
 **Slide:**
 
@@ -343,9 +434,9 @@ Evidências
 
 ---
 
-# Ato 11 · O trabalho começa a circular
+# Ato 12 · O trabalho começa a circular
 
-## Cena 13 · Paralelismo
+## Cena 16 · Paralelismo
 
 **Slide:**
 
@@ -378,7 +469,7 @@ Descobrir contexto
 
 ---
 
-## Cena 14 · Agentes conversam
+## Cena 17 · Agentes conversam
 
 **Objetivo:** mostrar colaboração entre agentes e revisão cruzada.
 
@@ -410,9 +501,9 @@ Backend Agent
 
 ---
 
-# Ato 12 · Está pronto?
+# Ato 13 · Está pronto?
 
-## Cena 15 · Evidência
+## Cena 18 · Evidência
 
 **Slide:**
 
@@ -438,9 +529,9 @@ Evidências
 
 ---
 
-# Ato 13 · A revelação
+# Ato 14 · A revelação
 
-## Cena 16 · O mesmo pedido, outro sistema de trabalho
+## Cena 19 · O mesmo pedido, outro sistema de trabalho
 
 **Slide inicial:**
 
@@ -474,13 +565,13 @@ Depois revelar progressivamente:
 
 # O que mudou?
 
-**Notas:** conduzir a audiência até a conclusão de que a mudança principal foi a organização do trabalho, não apenas a escolha de um modelo.
+**Notas:** conduzir a audiência até a conclusão de que a mudança principal foi a organização do trabalho, não apenas a escolha de um modelo. A base de conhecimento e as integrações via MCP entram como infraestrutura de suporte, sem ocupar o centro da história.
 
 ---
 
-# Ato 14 · Fechamento
+# Ato 15 · Fechamento
 
-## Cena 17 · A pergunta que fica
+## Cena 20 · A pergunta que fica
 
 **Slide:**
 
