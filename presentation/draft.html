@@ -2,34 +2,33 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Agentic Engineering · Presentation Draft</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Agentic Engineering Workshop</title>
 <style>
-:root{--bg:#f4f1ea;--ink:#171717;--muted:#77736b;--card:#fffdf8;--line:#d8d2c7;--accent:#171717}
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#111;color:var(--ink)}
-.deck{height:100%;display:flex;align-items:center;justify-content:center}.slide{display:none;width:min(92vw,1280px);aspect-ratio:16/9;background:var(--bg);padding:6vw 7vw;position:relative;overflow:hidden}.slide.active{display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem}.slide h1{font-size:clamp(3rem,6vw,6.4rem);line-height:.98;margin:0 0 1.5rem;letter-spacing:-.05em}.slide h2{font-size:clamp(2.2rem,4vw,4.2rem);line-height:1;margin:0 0 1.5rem;letter-spacing:-.04em}.question{font-size:clamp(1.8rem,3.1vw,3.4rem);line-height:1.12;max-width:1050px}.answer{font-size:clamp(1.2rem,1.7vw,1.8rem);color:var(--muted);max-width:800px}.quote{border-left:5px solid var(--ink);padding-left:1.5rem;max-width:1000px}.chips{display:flex;gap:.7rem;flex-wrap:wrap}.chip{border:1px solid var(--line);background:var(--card);padding:.65rem 1rem;border-radius:999px;font-size:1.05rem}.cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.5rem}.box h3{margin:0 0 1rem;font-size:1.3rem}.box ul{margin:0;padding-left:1.2rem;font-size:1.1rem;line-height:1.8}.diagram{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(.9rem,1.5vw,1.35rem);line-height:1.55;white-space:pre;display:inline-block}.bigword{font-size:clamp(4rem,10vw,10rem);font-weight:800;letter-spacing:-.08em}.footer{position:absolute;bottom:2rem;left:7vw;right:7vw;display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}.notes{display:none}.hint{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);color:#aaa;font-size:12px;opacity:.65}
-@media(max-width:800px){.slide{padding:8vw}.cols{grid-template-columns:1fr}.footer{left:8vw;right:8vw}}
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f7f7f5}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{touch-action:pan-y}
+.slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;align-items:center;justify-content:center}.slide.active{display:flex}.content{max-width:1100px;width:100%}
+h1{font-size:clamp(2.5rem,7vw,6rem);line-height:1.02;margin:0 0 1.5rem}h2{font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:0 0 1.5rem}p,li,blockquote{font-size:clamp(1.15rem,2.3vw,2rem);line-height:1.4}blockquote{border-left:4px solid #202124;padding-left:1rem;margin:1rem 0}.eyebrow{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.card{background:#fff;border:1px solid #ddd;border-radius:18px;padding:1.5rem}.big{font-size:clamp(1.8rem,4vw,3.5rem)}pre{font-size:clamp(.8rem,1.5vw,1.2rem);line-height:1.45;overflow:auto;background:#fff;border:1px solid #ddd;border-radius:14px;padding:1.2rem}.counter{position:fixed;right:20px;bottom:16px;font-size:.8rem;opacity:.45}.hint{position:fixed;left:20px;bottom:16px;font-size:.75rem;opacity:.35}
+@media(max-width:700px){.slide{padding:6vh 7vw}.grid{grid-template-columns:1fr}.hint{display:none}}
 </style>
 </head>
 <body>
-<div class="deck">
-<section class="slide active"><div class="eyebrow">Agentic Engineering</div><h1>Segunda-feira,<br>9:07.</h1><div class="quote question">“O que você quer que eu faça?”</div><div class="footer"><span>Rascunho visual</span><span>1 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">A missão</div><h1>“Precisamos criar um cadastro de usuários.”</h1><div class="answer">O engenheiro abre o computador.</div><div class="footer"><span>O primeiro pedido</span><span>2 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">O engenheiro pensa</div><h2>“Por onde eu começo?”</h2><div class="chips"><span class="chip">Quem usa?</span><span class="chip">O que cadastrar?</span><span class="chip">Onde fica?</span><span class="chip">Quais regras?</span><span class="chip">Como validar?</span></div><div class="footer"><span>Antes de escrever código</span><span>3 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Beleza. Então eu tenho um pedido inicial, mas ainda preciso entender como vocês tomam decisões aqui. O que vocês usam para orientar essas decisões?”</div><div class="footer"><span>A pergunta vem primeiro</span><span>4 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Constitution</div><div class="answer">Como tomamos decisões</div><div class="cols" style="margin-top:2rem"><div class="box"><h3>É</h3><div class="chips"><span class="chip">Princípios</span><span class="chip">Valores</span><span class="chip">Trade-offs</span><span class="chip">Limites</span></div></div><div class="box"><h3>Não é</h3><div class="chips"><span class="chip">Tarefas</span><span class="chip">Tutorial</span><span class="chip">Documentação completa</span></div></div></div><div class="footer"><span>Critério de decisão</span><span>5 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Entendi como vocês tomam decisões. Mas como vocês trabalham no dia a dia? Tem alguma regra que eu preciso conhecer antes de continuar o cadastro?”</div><div class="footer"><span>Da decisão para o trabalho</span><span>6 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Instructions</div><div class="answer">Como trabalhamos aqui</div><div class="cols" style="margin-top:2rem"><div class="box"><h3>É</h3><div class="chips"><span class="chip">Padrões</span><span class="chip">Convenções</span><span class="chip">Regras</span><span class="chip">Restrições</span></div></div><div class="box"><h3>Não é</h3><div class="chips"><span class="chip">Objetivo</span><span class="chip">Conhecimento genérico</span><span class="chip">Missão</span></div></div></div><div class="footer"><span>Modo de trabalho</span><span>7 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Beleza. Eu já sei quais regras seguir. Mas quando existe uma atividade que fazemos toda hora, vocês têm algum procedimento para isso ou cada pessoa faz do seu jeito?”</div><div class="footer"><span>Quando o trabalho se repete</span><span>8 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Skills</div><div class="answer">Como executamos uma atividade recorrente</div><div class="diagram" style="margin-top:2rem">Conhecimento  →  Procedimento reutilizável  →  Execução</div><div class="footer"><span>Capacidade reutilizável</span><span>9 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Beleza. Eu já sei como vocês decidem, quais regras seguem e alguns procedimentos. Mas qual é o problema que estamos tentando resolver com esse cadastro?”</div><div class="footer"><span>Onde esse trabalho existe?</span><span>10 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Context</div><div class="answer">Onde estamos e por quê</div><div class="diagram" style="margin-top:2rem">Produto → Sistema → Arquitetura → Cadastro → Usuário</div><div class="footer"><span>Memória operacional do trabalho</span><span>11 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Tá. Agora eu sei como vocês trabalham e entendo o problema. O que exatamente vocês querem que eu entregue nesse cadastro?”</div><div class="footer"><span>Do contexto para a entrega</span><span>12 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Mission</div><div class="answer">O que precisa ser entregue agora?</div><div class="diagram" style="margin-top:2rem">Contexto + Objetivo + Restrições + Critérios de aceite</div><div class="footer"><span>Ordem de trabalho</span><span>13 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Beleza. Agora eu tenho contexto e sei qual é a missão. Com o que eu consigo trabalhar aqui? Onde estão meus arquivos, ferramentas e testes?”</div><div class="footer"><span>O trabalho precisa de um ambiente</span><span>14 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><div class="bigword">Harness</div><div class="answer">O ambiente onde o trabalho acontece</div><div class="diagram" style="margin-top:2rem">Código   GitHub   Testes   Issues   Pipeline   Ferramentas</div><div class="footer"><span>Capacidade operacional</span><span>15 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Beleza. Agora eu tenho ambiente, ferramentas e uma missão. Mas como eu sei se o que fiz funcionou? Se der errado, eu paro ou tento outra coisa?”</div><div class="footer"><span>Executar não basta</span><span>16 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><h2>Loop de execução</h2><div class="diagram">OBSERVE
+<main id="deck">
+<section class="slide active"><div class="content"><div class="eyebrow">Segunda-feira · 9:07</div><h1>O que você quer que eu faça?</h1><blockquote>“Precisamos criar um cadastro de usuários.”</blockquote></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O primeiro problema</div><h2>“O que significa cadastro de usuários nesse produto?”</h2><ul><li>Quem pode criar?</li><li>Quais dados?</li><li>Como autentica?</li><li>Quais restrições?</li><li>Como sabemos que está correto?</li></ul></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como tomamos decisões?</div><h2>Constitution</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Princípios</li><li>Valores</li><li>Trade-offs</li><li>Limites</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Lista de tarefas</li><li>Tutorial</li><li>Documentação completa</li></ul></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como trabalhamos aqui?</div><h2>Instructions</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Padrões</li><li>Convenções</li><li>Regras</li><li>Restrições</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Objetivo do projeto</li><li>Conhecimento genérico</li><li>Missão específica</li></ul></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como executamos atividades recorrentes?</div><h2>Skills</h2><p class="big">Conhecimento → Procedimento reutilizável → Execução</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Onde esse trabalho existe?</div><h2>Context</h2><p>Produto → Sistema → Arquitetura → Cadastro → Usuário</p><div class="grid"><div class="card">O que já existe?</div><div class="card">Por que estamos fazendo isso?</div><div class="card">Quem será afetado?</div><div class="card">Quais são as restrições?</div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O que exatamente precisa ser entregue?</div><h2>Mission</h2><p class="big">Contexto + Objetivo + Restrições + Critérios de aceite</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Com o que eu consigo trabalhar?</div><h2>Harness</h2><pre>             Harness
+                │
+      ┌─────────┼─────────┐
+      ↓         ↓         ↓
+    Código    GitHub    Testes
+      ↓         ↓         ↓
+     API      Issues   Pipeline</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como sei que funcionou?</div><h2>Loop de execução</h2><pre>OBSERVE
    ↓
 THINK
    ↓
@@ -37,34 +36,59 @@ ACT
    ↓
 VERIFY
    ├── OK → DONE
-   └── ERRO → CORRIGE → OBSERVE</div><div class="footer"><span>Feedback transforma execução em processo</span><span>17 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">A pergunta muda</div><div class="quote question">“E se ficar grande demais pra fazer sozinho? Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”</div><div class="footer"><span>Hora de distribuir trabalho</span><span>18 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Pergunta</div><div class="quote question">“Por que colocar todo o trabalho nas mãos de um único agente?”</div><div class="footer"><span>Especialização</span><span>19 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><h2>Agentes assumem responsabilidades.</h2><div class="diagram">                 Engenheiro
-                     │
-        ┌────────────┼────────────┐
-        ↓            ↓            ↓
-     Backend      Security      Tests</div><div class="footer"><span>Responsabilidade + contexto + ferramentas</span><span>20 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Delegação</div><div class="quote question">“Entendi. Posso dividir o cadastro entre agentes. Mas como eu decido o que cada um recebe e em que ordem eles trabalham?”</div><div class="footer"><span>Distribuir não é simplesmente dividir</span><span>21 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Resposta</div><h2>Decompor antes de delegar.</h2><div class="diagram">Objetivo
-  ↓
-Resultados necessários
-  ↓
-Responsabilidades
-  ↓
-Dependências
-  ↓
-Missões
-  ↓
-Evidências</div><div class="footer"><span>Paralelismo onde existe independência</span><span>22 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Confiabilidade</div><div class="quote question">“Como eu sei que posso confiar nisso?”</div><h2 style="margin-top:2rem">Evidência.</h2><div class="answer">Código · testes · validações · review</div><div class="footer"><span>“Terminou” não significa “está correto”</span><span>23 / 24</span></div></section>
-<section class="slide"><div class="eyebrow">Fechamento</div><h2>O pedido continua o mesmo.</h2><div class="quote question" style="margin-top:1rem">“Crie um cadastro de usuários.”</div><div class="answer" style="margin-top:2rem">O que mudou foi a forma de organizar o trabalho.</div><div class="footer"><span>Da próxima vez...</span><span>24 / 24</span></div></section>
-</div>
-<div class="hint">← → para navegar · Home / End</div>
+   └── ERRO → CORRIGE → OBSERVE</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O problema ficou grande</div><h2>“E se ficar grande demais pra fazer sozinho?”</h2><p>“Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Responsabilidades</div><h2>Agentes</h2><pre>             Engenheiro
+                  │
+       ┌──────────┼──────────┐
+       ↓          ↓          ↓
+    Backend    Security    Tests</pre><p>Um agente assume uma responsabilidade.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como dividir?</div><h2>Decomposição e delegação</h2><p class="big">Objetivo → Resultados → Responsabilidades → Dependências → Missões → Evidências</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Paralelismo</div><h2>Nem todo trabalho precisa ser paralelo.</h2><pre>Descobrir contexto
+   ├──→ Segurança
+   ├──→ Testes
+   └──→ Arquitetura
+             ↓
+      decisão arquitetural
+             ↓
+       implementação
+         ├──→ testes
+         └──→ revisão
+             ↓
+          integração</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Colaboração</div><h2>Agentes conversam</h2><div class="grid"><div class="card">Backend<br><small>“Contrato pronto.”</small></div><div class="card">Security<br><small>“Tenho uma restrição.”</small></div><div class="card">Tests<br><small>“Encontrei um caso não coberto.”</small></div><div class="card"><strong>Agentes podem revisar o trabalho de outros agentes.</strong></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Confiabilidade</div><h2>“Como eu sei que posso confiar nisso?”</h2><p class="big">Código → Testes → Validações → Review → Evidências</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">A revelação</div><h1>“Crie um cadastro de usuários.”</h1><p class="big">A tarefa não mudou.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O que mudou?</div><pre>              OBJETIVO
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+  Constitution           Context
+        │                   │
+ Instructions           Mission
+        │                   │
+      Skills             Harness
+        └─────────┬─────────┘
+                  ↓
+               Agentes
+                  ↓
+              Delegação
+                  ↓
+           Loop + Evidência
+                  ↓
+               Entrega</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Fechamento</div><h2>Da próxima vez que receber uma tarefa...</h2><p>“Como faço isso?”</p><p>↓</p><p class="big"><strong>“Como organizo esse trabalho para que humanos e agentes produzam o melhor resultado?”</strong></p></div></section>
+</main>
+<div class="counter" id="counter"></div><div class="hint">← → · espaço · swipe</div>
 <script>
-const slides=[...document.querySelectorAll('.slide')];let i=0;
-function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));}
-addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1)});
+const slides=[...document.querySelectorAll('.slide')];let current=0;
+function show(index){current=(index+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${current+1} / ${slides.length}`;}
+function next(){show(current+1)}function prev(){show(current-1)}
+document.addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}});
+let startX=0,startY=0,startTime=0;
+document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;const t=e.touches[0];startX=t.clientX;startY=t.clientY;startTime=Date.now()},{passive:true});
+document.addEventListener('touchend',e=>{if(!startTime||e.changedTouches.length!==1)return;const t=e.changedTouches[0],dx=t.clientX-startX,dy=t.clientY-startY,dt=Date.now()-startTime;startTime=0;if(dt>700||Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.25)return;if(dx<0)next();else prev();},{passive:true});
+show(0);
 </script>
 </body>
 </html>
