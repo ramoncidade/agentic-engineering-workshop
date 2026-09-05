@@ -7,8 +7,9 @@
 ## Princípios editoriais
 
 - A apresentação conta uma história de engenharia, em vez de apenas explicar conceitos.
-- O mesmo problema acompanha toda a narrativa: **"Crie um cadastro de usuários."**
-- As perguntas do novo engenheiro aparecem nos slides para sustentar o roleplay.
+- O mesmo problema acompanha toda a narrativa: **“Crie um cadastro de usuários.”**
+- A **pergunta do novo engenheiro vem antes do conceito**. O conceito apresentado em seguida é a resposta à pergunta.
+- As perguntas do engenheiro aparecem nos slides para sustentar o roleplay.
 - Exemplos de **É / Não é** também aparecem nos slides quando ajudam a fixar o conceito.
 - Explicações, exemplos adicionais, ressalvas e instruções de condução ficam nas notas do apresentador.
 - Diagramas e relações entre conceitos devem privilegiar linguagem visual.
@@ -28,53 +29,59 @@
 
 # Segunda-feira, 9:07
 
-> “Crie um cadastro de usuários.”
+> “O que você quer que eu faça?”
+
+**Resposta:**
+
+> “Precisamos criar um cadastro de usuários.”
 
 **Visual:** personagem principal diante do computador.
-
-**Fala:** apresentar o personagem como um excelente engenheiro que acabou de entrar no time.
 
 **Interação:** perguntar à sala se ele já consegue começar.
 
 ---
 
-## Cena 02 · As perguntas começam
+## Cena 02 · O que falta?
 
-**Objetivo:** fazer a audiência descobrir por que uma instrução curta não é suficiente.
+**Objetivo:** fazer a audiência perceber que o pedido inicial deixa muitas decisões em aberto.
 
 **Perguntas no slide, reveladas progressivamente:**
 
-> “Cadastro de quê?”
+> “O que significa ‘cadastro de usuários’ nesse produto?”
 
-> “Quem vai usar?”
+> “Quem pode criar um usuário?”
 
-> “Quais dados precisamos guardar?”
+> “Quais dados podem ser armazenados?”
 
-> “Onde isso vai rodar?”
+> “Como funciona a autenticação?”
 
-> “Tem alguma regra do negócio?”
+> “Há requisitos de segurança ou privacidade?”
 
-> “Como vocês fazem isso aqui?”
+> “Existe uma experiência de cadastro no aplicativo?”
 
-> “Como vou saber que terminei?”
+> “Já existe uma API que podemos aproveitar?”
 
-**Interação:** deixar a sala completar as perguntas antes de explicar a solução.
+> “Como sabemos que a entrega está correta?”
 
-**Mensagem:** um engenheiro competente precisa de mais do que uma tarefa isolada para produzir uma boa solução.
+**Interação:** deixar a sala descobrir outras perguntas.
 
 ---
 
-# Ato 2 · Equipando o engenheiro
+# Ato 2 · Como o engenheiro deve decidir?
 
-## Cena 03 · Como tomamos decisões?
-
-**Objetivo:** introduzir Constitution como princípios que orientam escolhas.
+## Cena 03 · A pergunta vem primeiro
 
 **Slide:**
 
+> **“Beleza. Então eu tenho um pedido inicial, mas ainda preciso entender como vocês tomam decisões aqui. O que vocês usam para orientar essas decisões?”**
+
+Pausa. Deixar a pergunta existir antes de apresentar o conceito.
+
+### Resposta
+
 # Constitution
 
-### Como tomamos decisões
+**Como tomamos decisões**
 
 **É**
 - princípios
@@ -87,23 +94,23 @@
 - tutorial
 - documentação completa
 
-**Pergunta do engenheiro:**
-
-> “Quando existem duas soluções boas, como vocês escolhem?”
-
-**Notas:** explicar princípios de decisão e trade-offs, usando o cadastro como exemplo.
+**Notas:** explicar que a Constituição transfere critério, não apenas informação.
 
 ---
 
-## Cena 04 · Quais são as regras?
+# Ato 3 · Como trabalhamos aqui?
 
-**Objetivo:** diferenciar regras de trabalho de princípios de decisão.
+## Cena 04 · A próxima pergunta
 
 **Slide:**
 
+> **“Entendi como vocês tomam decisões. Mas como vocês trabalham no dia a dia? Tem alguma regra que eu preciso conhecer antes de continuar o cadastro?”**
+
+### Resposta
+
 # Instructions
 
-### Como trabalhamos aqui
+**Como trabalhamos aqui**
 
 **É**
 - padrões
@@ -116,21 +123,23 @@
 - conhecimento genérico
 - missão específica
 
-**Pergunta do engenheiro:**
-
-> “Tem alguma regra que eu preciso seguir?”
+**Notas:** mostrar que uma Constituição orienta escolhas, enquanto instruções definem o modo de trabalho daquele ambiente.
 
 ---
 
-## Cena 05 · Como fazemos isso?
+# Ato 4 · Como executamos atividades recorrentes?
 
-**Objetivo:** introduzir Skills como capacidades/procedimentos reutilizáveis.
+## Cena 05 · A pergunta seguinte
 
 **Slide:**
 
+> **“Beleza. Eu já sei quais regras seguir. Mas quando existe uma atividade que fazemos toda hora, vocês têm algum procedimento para isso ou cada pessoa faz do seu jeito?”**
+
+### Resposta
+
 # Skills
 
-### Como executamos tarefas
+**Como executamos uma atividade recorrente**
 
 `Conhecimento → Procedimento reutilizável → Execução`
 
@@ -144,45 +153,49 @@
 - regra global
 - contexto específico
 
-**Pergunta do engenheiro:**
-
-> “Vocês já sabem como fazer isso? Posso reutilizar o processo?”
+**Notas:** usar `revisar-api` como exemplo.
 
 ---
 
-# Ato 3 · Colocando o engenheiro dentro do sistema
+# Ato 5 · Onde esse trabalho existe?
 
-## Cena 06 · Onde estou?
-
-**Objetivo:** mostrar que conhecimento isolado não substitui o contexto do projeto.
+## Cena 06 · A pergunta seguinte
 
 **Slide:**
 
+> **“Beleza. Eu já sei como vocês decidem, quais regras seguem e alguns procedimentos. Mas qual é o problema que estamos tentando resolver com esse cadastro?”**
+
+### Resposta
+
 # Context
 
-### Onde esse trabalho existe
+**Onde estamos e por quê**
 
 `Produto → Sistema → Arquitetura → Cadastro → Usuário`
 
-**Perguntas:**
+**O contexto precisa permitir responder:**
 - “O que já existe?”
 - “Por que estamos fazendo isso?”
 - “Quem será afetado?”
 - “Quais são as restrições?”
 
-**Notas:** explicar contexto como memória operacional do trabalho, não como acúmulo de documentação.
+**Notas:** explicar contexto como memória operacional do trabalho, incluindo decisões, riscos, restrições e validação.
 
 ---
 
-## Cena 07 · O que eu faço agora?
+# Ato 6 · O que exatamente precisa ser entregue?
 
-**Objetivo:** transformar o contexto em uma missão executável.
+## Cena 07 · A pergunta seguinte
 
 **Slide:**
 
+> **“Tá. Agora eu sei como vocês trabalham e entendo o problema. O que exatamente vocês querem que eu entregue nesse cadastro?”**
+
+### Resposta
+
 # Mission
 
-### O que precisa ser entregue agora?
+**O que precisa ser entregue agora?**
 
 `Contexto + Objetivo + Restrições + Critérios de aceite`
 
@@ -192,19 +205,23 @@
 **Depois:**
 > “Agora eu sei exatamente o que significa criar esse cadastro.”
 
+**Notas:** explicar que missão não é prompt mágico. Ela é uma ordem de trabalho proporcional à complexidade da tarefa.
+
 ---
 
-# Ato 4 · Dando ferramentas
+# Ato 7 · Com o que eu consigo trabalhar?
 
-## Cena 08 · Onde eu trabalho?
-
-**Objetivo:** introduzir Harness como ambiente operacional.
+## Cena 08 · A pergunta seguinte
 
 **Slide:**
 
+> **“Beleza. Agora eu tenho contexto e sei qual é a missão. Com o que eu consigo trabalhar aqui? Onde estão meus arquivos, ferramentas e testes?”**
+
+### Resposta
+
 # Harness
 
-### O ambiente onde o trabalho acontece
+**O ambiente onde o trabalho acontece**
 
 ```text
                  Harness
@@ -216,17 +233,21 @@
       API        Issues      Pipeline
 ```
 
-**Notas:** diferenciar harness de LLM, agente e ferramentas individuais.
+**Notas:** diferenciar LLM, agente e harness; introduzir limites de acesso e aprovação.
 
 ---
 
-# Ato 5 · Deixar o engenheiro trabalhar
+# Ato 8 · Como sei que funcionou?
 
-## Cena 09 · O loop
-
-**Objetivo:** mostrar a diferença entre responder uma pergunta e executar um trabalho com feedback.
+## Cena 09 · A pergunta seguinte
 
 **Slide:**
+
+> **“Beleza. Agora eu tenho ambiente, ferramentas e uma missão. Mas como eu sei se o que fiz funcionou? Se der errado, eu paro ou tento outra coisa?”**
+
+### Resposta
+
+# Loop de execução
 
 ```text
 OBSERVE
@@ -246,62 +267,41 @@ VERIFY
        OBSERVE
 ```
 
-**Pergunta do engenheiro:**
-
-> “E se meu primeiro caminho não funcionar?”
-
-**Notas:** explicar feedback, retry, limites, aprovações e evidências.
+**Notas:** explicar feedback, retry, limites, critérios de parada, aprovações e evidências.
 
 ---
 
-# Ato 6 · O problema ficou grande
+# Ato 9 · Posso pedir ajuda?
 
-## Cena 10 · Posso pedir ajuda?
-
-**Objetivo:** fazer agentes especializados surgirem como consequência da complexidade.
+## Cena 10 · O problema ficou grande
 
 **Slide:**
 
-# 🤔
+> **“E se ficar grande demais pra fazer sozinho? Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”**
 
-> “Isso ficou grande.”
+### Resposta
 
-Depois:
+# Vamos dividir o trabalho.
 
-> **“Posso pedir ajuda?”**
+**Visual:** o personagem olha para o cadastro crescendo em várias frentes.
 
-**Notas:** introduzir a ideia de dividir trabalho antes de apresentar uma equipe de agentes.
+**Notas:** esta é a ponte narrativa para agentes especializados.
 
 ---
 
-# Ato 7 · Os outros entram
+# Ato 10 · Quem assume cada responsabilidade?
 
-## Cena 11 · O primeiro agente
-
-**Objetivo:** definir agente por responsabilidade, não por persona.
+## Cena 11 · Por que mais de um agente?
 
 **Slide:**
 
-```text
-                 Engenheiro
-                     │
-                     ▼
-                  ┌───────┐
-                  │ Agent │
-                  └───────┘
-```
+> **“Por que colocar todo o trabalho nas mãos de um único agente?”**
 
-> **Um agente assume uma responsabilidade.**
+### Resposta
 
-**Notas:** diferenciar LLM, agente, ferramentas e harness.
+# Agentes
 
----
-
-## Cena 12 · O time cresce
-
-**Objetivo:** mostrar especialização e responsabilidades distintas.
-
-**Slide:**
+**Um agente assume uma responsabilidade.**
 
 ```text
                  Engenheiro
@@ -309,62 +309,76 @@ Depois:
         ┌────────────┼────────────┐
         ↓            ↓            ↓
      Backend      Security      Tests
-        │            │            │
-        └────────────┼────────────┘
-                     ↓
-                   Review
 ```
 
-**Notas:** apresentar especialização como forma de dividir responsabilidade e reduzir sobrecarga de contexto.
-
-**Possível humor:** aqui começam a aparecer os nomes dos personagens, se a identidade deles já estiver definida.
+**Notas:** agente não é apenas persona. Responsabilidade, contexto, regras, ferramentas e evidências importam.
 
 ---
 
-# Ato 8 · Quem coordena?
+## Cena 12 · Como dividir?
 
-## Cena 13 · Decomposição e delegação
+**Slide:**
 
-**Objetivo:** mostrar que múltiplos agentes não significam paralelismo automático.
+> **“Entendi. Posso dividir o cadastro entre agentes. Mas como eu decido o que cada um recebe e em que ordem eles trabalham?”**
 
-**Slide 1:**
+### Resposta
+
+# Decomposição e delegação
+
+```text
+Objetivo
+  ↓
+Resultados necessários
+  ↓
+Responsabilidades
+  ↓
+Dependências
+  ↓
+Missões
+  ↓
+Evidências
+```
+
+**Notas:** explicar que mais agentes não significam automaticamente mais velocidade.
+
+---
+
+# Ato 11 · O trabalho começa a circular
+
+## Cena 13 · Paralelismo
+
+**Slide:**
 
 # Nem todo trabalho precisa ser paralelo.
 
-**Slide 2:**
-
 ```text
-Cadastro
-   │
-   ├── Backend
-   ├── Frontend
-   ├── Segurança
-   └── Testes
+Descobrir contexto
+        │
+        ├────────→ análise de segurança
+        │
+        ├────────→ estratégia de testes
+        │
+        └────────→ alternativas arquiteturais
+                         │
+                         ↓
+                  decisão arquitetural
+                         │
+                         ↓
+                    implementação
+                         │
+                 ┌───────┴───────┐
+                 ↓               ↓
+              testes          revisão
+                 └───────┬───────┘
+                         ↓
+                      integração
 ```
 
-**Slide 3:**
-
-```text
-Contrato
-   ↓
-Backend ──────→ Frontend
-   ↓
-Testes
-   ↓
-Integração
-```
-
-**Pergunta do engenheiro:**
-
-> **“Quem faz o quê? E o que pode acontecer ao mesmo tempo?”**
-
-**Notas:** explicar fronteiras, dependências, paralelismo e quando um único agente é melhor.
+**Notas:** mostrar dependências e fronteiras relativamente independentes.
 
 ---
 
-# Ato 9 · Agentes trabalhando juntos
-
-## Cena 14 · Conversas entre agentes
+## Cena 14 · Agentes conversam
 
 **Objetivo:** mostrar colaboração entre agentes e revisão cruzada.
 
@@ -390,21 +404,23 @@ Test Agent
 Backend Agent
 ```
 
-**Frase-chave no slide:**
+**Frase-chave:**
 
 > **Agentes podem recomendar, investigar, implementar e revisar o trabalho de outro agente.**
 
 ---
 
-# Ato 10 · Evidência
+# Ato 12 · Está pronto?
 
-## Cena 15 · Está pronto?
-
-**Objetivo:** impedir que “o agente terminou” seja confundido com “o trabalho está correto”.
+## Cena 15 · Evidência
 
 **Slide:**
 
-# “Está pronto?”
+> **“Como eu sei que posso confiar nisso?”**
+
+### Resposta
+
+# Evidências
 
 ```text
 Código
@@ -418,25 +434,19 @@ Review
 Evidências
 ```
 
-**Pergunta:**
-
-> **“Como eu sei que posso confiar nisso?”**
-
-**Notas:** qualidade, testes, validações, riscos, revisão humana e critérios de aceite.
+**Notas:** reforçar que “o agente terminou” não significa “o trabalho está correto”.
 
 ---
 
-# Ato 11 · A revelação
+# Ato 13 · A revelação
 
 ## Cena 16 · O mesmo pedido, outro sistema de trabalho
 
-**Objetivo:** voltar ao início e revelar a transformação.
-
-**Slide:**
+**Slide inicial:**
 
 > **“Crie um cadastro de usuários.”**
 
-Depois revelar a estrutura:
+Depois revelar progressivamente:
 
 ```text
                  OBJETIVO
@@ -468,11 +478,9 @@ Depois revelar a estrutura:
 
 ---
 
-# Ato 12 · Fechamento
+# Ato 14 · Fechamento
 
 ## Cena 17 · A pergunta que fica
-
-**Objetivo:** transformar a narrativa em uma pergunta prática para o trabalho real.
 
 **Slide:**
 
@@ -505,7 +513,7 @@ Precisamos decidir se cada responsabilidade terá:
 - um personagem recorrente;
 - ou uma combinação dos dois.
 
-Uma direção possível é começar com referências informais como “Claudinho” apenas como fenômeno cultural e, depois, mostrar que o nome do modelo importa menos do que a responsabilidade assumida pelo agente.
+Uma direção possível é usar referências informais como “Claudinho” apenas como fenômeno cultural e, depois, mostrar que o nome do modelo importa menos do que a responsabilidade assumida pelo agente.
 
 ## Identidade visual
 
