@@ -21,6 +21,30 @@ h1{font-size:clamp(2.5rem,7vw,6rem);line-height:1.02;margin:0 0 1.5rem}h2{font-s
 <section class="slide"><div class="content"><div class="eyebrow">Como executamos atividades recorrentes?</div><h2>Skills</h2><p class="big">Conhecimento → Procedimento reutilizável → Execução</p></div></section>
 <section class="slide"><div class="content"><div class="eyebrow">Onde esse trabalho existe?</div><h2>Context</h2><p>Produto → Sistema → Arquitetura → Cadastro → Usuário</p><div class="grid"><div class="card">O que já existe?</div><div class="card">Por que estamos fazendo isso?</div><div class="card">Quem será afetado?</div><div class="card">Quais são as restrições?</div></div></div></section>
 <section class="slide"><div class="content"><div class="eyebrow">O que exatamente precisa ser entregue?</div><h2>Mission</h2><p class="big">Contexto + Objetivo + Restrições + Critérios de aceite</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Memória</div><h2>“Preciso lembrar tudo isso sozinho toda vez que for fazer alguma demanda?”</h2></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Conhecimento reutilizável</div><h2>Uma base de conhecimento centralizada</h2><pre>             CONHECIMENTO
+                   │
+        ┌──────────┼──────────┐
+        ↓          ↓          ↓
+   Constitution  Skills    Contexto
+        │          │          │
+        └──────────┼──────────┘
+                   ↓
+          Base de conhecimento</pre><p>Disponível quando necessário.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Um exemplo</div><h2>AI Toolbox</h2><p class="big">Uma infraestrutura reutilizável para organizar e disponibilizar conhecimento aos agentes.</p><p>Constituições · Instructions · Skills · Agents · Contexto · Conhecimento técnico</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como o agente acessa essas fontes?</div><h2>MCP</h2><pre>                    AGENTE
+                       │
+                    Harness
+                       │
+             ┌─────────┼─────────┐
+             ↓         ↓         ↓
+            MCP       MCP       MCP
+             │         │         │
+          Figma      Jira    AI Toolbox
+             │         │         │
+             ↓         ↓         ↓
+          Design    Trabalho  Conhecimento</pre><p><strong>MCP conecta o agente às ferramentas e fontes que ele precisa usar.</strong></p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Uma distinção importante</div><h2>Conhecimento ≠ interface</h2><div class="grid"><div class="card"><strong>Fonte</strong><p>Figma · Jira · GitHub · AI Toolbox · Banco de dados</p></div><div class="card"><strong>Interface</strong><p>MCP permite que o agente converse com essas fontes.</p></div></div><p class="big">A Toolbox é um exemplo. O conceito funciona sem ela.</p></div></section>
 <section class="slide"><div class="content"><div class="eyebrow">Com o que eu consigo trabalhar?</div><h2>Harness</h2><pre>             Harness
                 │
       ┌─────────┼─────────┐
