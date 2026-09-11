@@ -20,7 +20,27 @@ A apresentação é autocontida, não depende de bibliotecas externas e foi pens
 - Clique nos lados da tela para navegar
 - `#N` na URL abre diretamente o slide N
 
-O roteiro de apresentação está em [`presentation/speaker-notes.md`](presentation/speaker-notes.md).
+## Sprites e placeholders
+
+Os sprites foram temporariamente substituídos por placeholders para permitir edição manual das expressões e poses antes da versão final.
+
+O padrão adotado é:
+
+`<img src="assets/characters/pietro-confuso.png" alt="Placeholder: Pietro confuso">`
+
+Ou seja, o arquivo deve seguir o formato `{personagem}-{expressão}.png`. Alguns exemplos já previstos no material:
+
+- `claudinho-pensando.png`
+- `claudinho-surpreso.png`
+- `pietro-sereno.png`
+- `pietro-apontando.png`
+- `pietro-explicando.png`
+- `pietro-demonstrando.png`
+- `pietro-mostrando-mapa.png`
+- `pietro-comparando.png`
+- `elenco.png`
+
+Isso permite substituir os arquivos manualmente sem alterar a estrutura narrativa ou o layout dos slides.
 
 ## Elenco
 
