@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Agentic Engineering Workshop · v2</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f7f7f5}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{touch-action:pan-y}
+.slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;align-items:center;justify-content:center}.slide.active{display:flex}.content{max-width:1100px;width:100%}
+h1{font-size:clamp(2.5rem,7vw,6rem);line-height:1.02;margin:0 0 1.5rem}h2{font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:0 0 1.5rem}p,li,blockquote{font-size:clamp(1.15rem,2.3vw,2rem);line-height:1.4}blockquote{border-left:4px solid #202124;padding-left:1rem;margin:1rem 0}.eyebrow{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.card{background:#fff;border:1px solid #ddd;border-radius:18px;padding:1.5rem}.big{font-size:clamp(1.8rem,4vw,3.5rem)}pre{font-size:clamp(.8rem,1.5vw,1.2rem);line-height:1.45;overflow:auto;background:#fff;border:1px solid #ddd;border-radius:14px;padding:1.2rem}.counter{position:fixed;right:20px;bottom:16px;font-size:.8rem;opacity:.45}.hint{position:fixed;left:20px;bottom:16px;font-size:.75rem;opacity:.35}
+@media(max-width:700px){.slide{padding:6vh 7vw}.grid{grid-template-columns:1fr}.hint{display:none}}
+</style>
+</head>
+<body>
+<main id="deck">
+<section class="slide active"><div class="content"><div class="eyebrow">Segunda-feira · 9:07</div><h1>O que você quer que eu faça?</h1><blockquote>“Precisamos criar um cadastro de usuários.”</blockquote></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O primeiro problema</div><h2>“O que significa cadastro de usuários nesse produto?”</h2><ul><li>Quem pode criar?</li><li>Quais dados?</li><li>Como autentica?</li><li>Quais restrições?</li><li>Como sabemos que está correto?</li></ul></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como tomamos decisões?</div><h2>Constitution</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Princípios</li><li>Valores</li><li>Trade-offs</li><li>Limites</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Lista de tarefas</li><li>Tutorial</li><li>Documentação completa</li></ul></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como trabalhamos aqui?</div><h2>Instructions</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Padrões</li><li>Convenções</li><li>Regras</li><li>Restrições</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Objetivo do projeto</li><li>Conhecimento genérico</li><li>Missão específica</li></ul></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como executamos atividades recorrentes?</div><h2>Skills</h2><p class="big">Conhecimento → Procedimento reutilizável → Execução</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Onde esse trabalho existe?</div><h2>Context</h2><p>Produto → Sistema → Arquitetura → Cadastro → Usuário</p><div class="grid"><div class="card">O que já existe?</div><div class="card">Por que estamos fazendo isso?</div><div class="card">Quem será afetado?</div><div class="card">Quais são as restrições?</div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O que exatamente precisa ser entregue?</div><h2>Mission</h2><p class="big">Contexto + Objetivo + Restrições + Critérios de aceite</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Memória</div><h2>“Preciso lembrar tudo isso sozinho toda vez que for fazer alguma demanda?”</h2></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Conhecimento reutilizável</div><h2>Uma base de conhecimento centralizada</h2><pre>             CONHECIMENTO
+                   │
+        ┌──────────┼──────────┐
+        ↓          ↓          ↓
+   Constitution  Skills    Contexto
+        │          │          │
+        └──────────┼──────────┘
+                   ↓
+          Base de conhecimento</pre><p>Disponível quando necessário.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Um exemplo</div><h2>AI Toolbox</h2><p class="big">Uma infraestrutura reutilizável para organizar e disponibilizar conhecimento aos agentes.</p><p>Constituições · Instructions · Skills · Agents · Contexto · Conhecimento técnico</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como o agente acessa essas fontes?</div><h2>MCP</h2><pre>                    AGENTE
+                       │
+                    Harness
+                       │
+             ┌─────────┼─────────┐
+             ↓         ↓         ↓
+            MCP       MCP       MCP
+             │         │         │
+          Figma      Jira    AI Toolbox
+             │         │         │
+             ↓         ↓         ↓
+          Design    Trabalho  Conhecimento</pre><p><strong>MCP conecta o agente às ferramentas e fontes que ele precisa usar.</strong></p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Uma distinção importante</div><h2>Conhecimento ≠ interface</h2><div class="grid"><div class="card"><strong>Fonte</strong><p>Figma · Jira · GitHub · AI Toolbox · Banco de dados</p></div><div class="card"><strong>Interface</strong><p>MCP permite que o agente converse com essas fontes.</p></div></div><p class="big">A Toolbox é um exemplo. O conceito funciona sem ela.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Com o que eu consigo trabalhar?</div><h2>Harness</h2><pre>             Harness
+                │
+      ┌─────────┼─────────┐
+      ↓         ↓         ↓
+    Código    GitHub    Testes
+      ↓         ↓         ↓
+     API      Issues   Pipeline</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como sei que funcionou?</div><h2>Loop de execução</h2><pre>OBSERVE
+   ↓
+THINK
+   ↓
+ACT
+   ↓
+VERIFY
+   ├── OK → DONE
+   └── ERRO → CORRIGE → OBSERVE</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O problema ficou grande</div><h2>“E se ficar grande demais pra fazer sozinho?”</h2><p>“Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Responsabilidades</div><h2>Agentes</h2><pre>             Engenheiro
+                  │
+       ┌──────────┼──────────┐
+       ↓          ↓          ↓
+    Backend    Security    Tests</pre><p>Um agente assume uma responsabilidade.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Como dividir?</div><h2>Decomposição e delegação</h2><p class="big">Objetivo → Resultados → Responsabilidades → Dependências → Missões → Evidências</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Paralelismo</div><h2>Nem todo trabalho precisa ser paralelo.</h2><pre>Descobrir contexto
+   ├──→ Segurança
+   ├──→ Testes
+   └──→ Arquitetura
+             ↓
+      decisão arquitetural
+             ↓
+       implementação
+         ├──→ testes
+         └──→ revisão
+             ↓
+          integração</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Colaboração</div><h2>Agentes conversam</h2><div class="grid"><div class="card">Backend<br><small>“Contrato pronto.”</small></div><div class="card">Security<br><small>“Tenho uma restrição.”</small></div><div class="card">Tests<br><small>“Encontrei um caso não coberto.”</small></div><div class="card"><strong>Agentes podem revisar o trabalho de outros agentes.</strong></div></div></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Confiabilidade</div><h2>“Como eu sei que posso confiar nisso?”</h2><p class="big">Código → Testes → Validações → Review → Evidências</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">A revelação</div><h1>“Crie um cadastro de usuários.”</h1><p class="big">A tarefa não mudou.</p></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">O que mudou?</div><pre>              OBJETIVO
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+  Constitution           Context
+        │                   │
+ Instructions           Mission
+        │                   │
+      Skills             Harness
+        └─────────┬─────────┘
+                  ↓
+               Agentes
+                  ↓
+              Delegação
+                  ↓
+           Loop + Evidência
+                  ↓
+               Entrega</pre></div></section>
+<section class="slide"><div class="content"><div class="eyebrow">Fechamento</div><h2>Da próxima vez que receber uma tarefa...</h2><p>“Como faço isso?”</p><p>↓</p><p class="big"><strong>“Como organizo esse trabalho para que humanos e agentes produzam o melhor resultado?”</strong></p></div></section>
+</main>
+<div class="counter" id="counter"></div><div class="hint">← → · espaço · swipe</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let current=0;
+function show(index){current=(index+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${current+1} / ${slides.length}`;}
+function next(){show(current+1)}function prev(){show(current-1)}
+document.addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}});
+let startX=0,startY=0,startTime=0;
+document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;const t=e.touches[0];startX=t.clientX;startY=t.clientY;startTime=Date.now()},{passive:true});
+document.addEventListener('touchend',e=>{if(!startTime||e.changedTouches.length!==1)return;const t=e.changedTouches[0],dx=t.clientX-startX,dy=t.clientY-startY,dt=Date.now()-startTime;startTime=0;if(dt>700||Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.25)return;if(dx<0)next();else prev();},{passive:true});
+show(0);
+</script>
+</body>
+</html>
