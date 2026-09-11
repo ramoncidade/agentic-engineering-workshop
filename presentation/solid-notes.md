@@ -1,0 +1,1 @@
+A direção visual desta variante troca o neon por uma linguagem mais sólida, editorial e próxima de produto real. O destaque visual fica nos personagens e na narrativa, não em efeitos luminosos.

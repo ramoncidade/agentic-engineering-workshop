@@ -1,0 +1,1 @@
+The presentation variant in `index-solid.html` is the solid visual direction for the workshop.
