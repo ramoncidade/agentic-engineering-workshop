@@ -3,116 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Agentic Engineering Workshop · v2</title>
+<meta name="theme-color" content="#07111f">
+<title>Agentic Engineering Workshop</title>
 <style>
-:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f7f7f5}
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{touch-action:pan-y}
-.slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;align-items:center;justify-content:center}.slide.active{display:flex}.content{max-width:1100px;width:100%}
-h1{font-size:clamp(2.5rem,7vw,6rem);line-height:1.02;margin:0 0 1.5rem}h2{font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:0 0 1.5rem}p,li,blockquote{font-size:clamp(1.15rem,2.3vw,2rem);line-height:1.4}blockquote{border-left:4px solid #202124;padding-left:1rem;margin:1rem 0}.eyebrow{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.card{background:#fff;border:1px solid #ddd;border-radius:18px;padding:1.5rem}.big{font-size:clamp(1.8rem,4vw,3.5rem)}pre{font-size:clamp(.8rem,1.5vw,1.2rem);line-height:1.45;overflow:auto;background:#fff;border:1px solid #ddd;border-radius:14px;padding:1.2rem}.counter{position:fixed;right:20px;bottom:16px;font-size:.8rem;opacity:.45}.hint{position:fixed;left:20px;bottom:16px;font-size:.75rem;opacity:.35}
-@media(max-width:700px){.slide{padding:6vh 7vw}.grid{grid-template-columns:1fr}.hint{display:none}}
+:root{--bg:#07111f;--panel:#0d1a2b;--panel2:#122238;--ink:#eef4ff;--muted:#9db0c8;--line:#263a52;--cyan:#57d6ff;--lime:#b8ef62;--orange:#ffb454;--pink:#ff7eb6;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans)}body{touch-action:none}
+.deck{width:100vw;height:100vh;position:relative;background:radial-gradient(circle at 75% 15%,#17314d 0,transparent 30%),radial-gradient(circle at 15% 90%,#102b36 0,transparent 28%),var(--bg)}
+.slide{position:absolute;inset:0;padding:7vh 8vw 9vh;display:none;align-items:center;opacity:0}.slide.active{display:flex;animation:in .42s ease forwards}.slide.exit{display:flex;animation:out .22s ease forwards}@keyframes in{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}@keyframes out{to{opacity:0;transform:translateX(-18px)}}
+.content{width:min(1180px,100%);margin:auto}.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.1rem}.kicker{color:var(--muted);font-size:clamp(1rem,1.5vw,1.25rem);margin-top:1rem}.chapter{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-bottom:2rem}h1{font-size:clamp(3.2rem,8vw,8rem);line-height:.94;letter-spacing:-.055em;margin:0;max-width:1000px}h2{font-size:clamp(2.2rem,5.2vw,5.4rem);line-height:.98;letter-spacing:-.045em;margin:0 0 1.7rem;max-width:1100px}p,li{font-size:clamp(1.05rem,1.8vw,1.55rem);line-height:1.48;color:#d8e3f1}ul{padding-left:1.2em}.lead{font-size:clamp(1.55rem,3vw,2.7rem);line-height:1.2;color:var(--ink);max-width:950px}.quote{font-family:var(--mono);font-size:clamp(1.05rem,2vw,1.8rem);line-height:1.45;border-left:3px solid var(--lime);padding:.8rem 1.2rem;margin:2rem 0;max-width:950px;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:1.35rem}.card strong{font-family:var(--mono);font-size:.9rem;color:var(--lime);text-transform:uppercase;letter-spacing:.08em}.card p,.card li{font-size:clamp(1rem,1.45vw,1.3rem)}.tag{display:inline-block;font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:.45rem .7rem;color:var(--muted);margin:.25rem .2rem .25rem 0}.formula{font-family:var(--mono);font-size:clamp(1.25rem,2.6vw,2.4rem);line-height:1.35;color:#fff}.formula span{color:var(--cyan)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;margin-top:1.5rem}.node{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:.75rem 1rem;font-family:var(--mono);font-size:.85rem}.arrow{color:var(--cyan);font-family:var(--mono)}pre{margin:1.5rem 0;background:#050c16;border:1px solid var(--line);border-radius:18px;padding:1.2rem;overflow:auto;font:clamp(.75rem,1.3vw,1.05rem)/1.55 var(--mono);color:#dce9f8;box-shadow:0 15px 50px #0004}.accent{color:var(--cyan)}.lime{color:var(--lime)}.orange{color:var(--orange)}.pink{color:var(--pink)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:4vw;align-items:center}.hero-art{height:min(55vh,500px);position:relative;border:1px solid var(--line);border-radius:28px;background:linear-gradient(160deg,#0d2035,#091521);overflow:hidden}.hero-art:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:#57d6ff22;filter:blur(8px);right:-70px;top:-50px}.terminal{position:absolute;left:10%;right:10%;top:14%;bottom:14%;border:1px solid #35516e;border-radius:18px;background:#07101b;padding:1rem;font:clamp(.65rem,1vw,.85rem)/1.7 var(--mono);color:#b9cadc}.terminal b{color:var(--lime)}.terminal i{color:var(--cyan);font-style:normal}.person{position:absolute;right:7%;bottom:5%;width:115px;height:155px}.head{width:62px;height:62px;border-radius:50%;background:#c58b68;margin:auto;border:3px solid #07111f}.hair{position:absolute;width:72px;height:48px;border-radius:50% 50% 42% 42%;background:#17151b;top:-5px;left:21px}.body{width:105px;height:92px;border-radius:28px 28px 14px 14px;background:#6d82a0;margin:8px auto}.glasses{position:absolute;top:23px;left:25px;width:62px;height:18px}.glasses:before,.glasses:after{content:"";position:absolute;width:23px;height:14px;border:2px solid #222;border-radius:4px}.glasses:before{left:0}.glasses:after{right:0}.glasses i{position:absolute;left:24px;top:6px;width:14px;border-top:2px solid #222}
+.character-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.char{min-height:230px;position:relative;overflow:hidden}.char .avatar{width:78px;height:78px;border-radius:50%;margin-bottom:1rem;position:relative;background:#b78265}.char .avatar:before{content:"";position:absolute;inset:-8px 5px 38px;border-radius:50%;background:#20191b}.char:nth-child(2) .avatar:before{inset:-5px -8px 28px;background:#121114}.char:nth-child(3) .avatar:before{inset:-6px 2px 30px;background:linear-gradient(90deg,#d94dce,#5cd6ff,#d9ef5c)}.char h3{margin:.1rem 0 .4rem;font-size:1.35rem}.char small{color:var(--muted);font-size:.95rem;line-height:1.4}.char .spark{position:absolute;right:15px;top:15px;font-family:var(--mono);color:var(--cyan)}
+.timeline{position:relative;padding-left:2rem}.timeline:before{content:"";position:absolute;left:6px;top:5px;bottom:5px;border-left:1px dashed #41607e}.step{position:relative;margin:0 0 1rem}.step:before{content:"";position:absolute;left:-2rem;top:.45rem;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #57d6ff18}.step b{font-family:var(--mono);color:var(--lime);font-size:.9rem}.step span{display:block;font-size:1.2rem;margin-top:.25rem}
+.footer{position:fixed;left:0;right:0;bottom:0;height:42px;display:flex;align-items:center;gap:14px;padding:0 22px;background:linear-gradient(transparent,#07111fee);z-index:10}.progress{height:3px;flex:1;background:#1b2b40;border-radius:9px;overflow:hidden}.progress i{display:block;height:100%;background:var(--cyan);width:0;transition:width .25s}.count,.controls{font:11px var(--mono);color:#7890a9}.controls{opacity:.65}.section{position:fixed;top:20px;left:22px;font:11px var(--mono);color:#7890a9;z-index:10}.logo{position:fixed;top:18px;right:22px;font:11px var(--mono);color:#7890a9;z-index:10}.hidden{display:none!important}
+@media(max-width:800px){.slide{padding:8vh 7vw 9vh}.hero{grid-template-columns:1fr}.hero-art{display:none}.grid,.character-row{grid-template-columns:1fr}.character-row .char{min-height:180px}.controls{display:none}h1{font-size:clamp(2.8rem,12vw,5rem)}h2{font-size:clamp(2.2rem,10vw,4rem)}pre{font-size:.7rem}.footer{height:35px;padding:0 12px}.section,.logo{top:12px;font-size:9px}}
+@media print{body{overflow:visible}.deck{height:auto}.slide,.slide.active{position:relative;display:flex;opacity:1!important;page-break-after:always;width:100vw;height:100vh}.footer,.section,.logo{display:none!important}}
 </style>
 </head>
 <body>
-<main id="deck">
-<section class="slide active"><div class="content"><div class="eyebrow">Segunda-feira · 9:07</div><h1>O que você quer que eu faça?</h1><blockquote>“Precisamos criar um cadastro de usuários.”</blockquote></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">O primeiro problema</div><h2>“O que significa cadastro de usuários nesse produto?”</h2><ul><li>Quem pode criar?</li><li>Quais dados?</li><li>Como autentica?</li><li>Quais restrições?</li><li>Como sabemos que está correto?</li></ul></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como tomamos decisões?</div><h2>Constitution</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Princípios</li><li>Valores</li><li>Trade-offs</li><li>Limites</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Lista de tarefas</li><li>Tutorial</li><li>Documentação completa</li></ul></div></div></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como trabalhamos aqui?</div><h2>Instructions</h2><div class="grid"><div class="card"><strong>É</strong><ul><li>Padrões</li><li>Convenções</li><li>Regras</li><li>Restrições</li></ul></div><div class="card"><strong>Não é</strong><ul><li>Objetivo do projeto</li><li>Conhecimento genérico</li><li>Missão específica</li></ul></div></div></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como executamos atividades recorrentes?</div><h2>Skills</h2><p class="big">Conhecimento → Procedimento reutilizável → Execução</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Onde esse trabalho existe?</div><h2>Context</h2><p>Produto → Sistema → Arquitetura → Cadastro → Usuário</p><div class="grid"><div class="card">O que já existe?</div><div class="card">Por que estamos fazendo isso?</div><div class="card">Quem será afetado?</div><div class="card">Quais são as restrições?</div></div></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">O que exatamente precisa ser entregue?</div><h2>Mission</h2><p class="big">Contexto + Objetivo + Restrições + Critérios de aceite</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Memória</div><h2>“Preciso lembrar tudo isso sozinho toda vez que for fazer alguma demanda?”</h2></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Conhecimento reutilizável</div><h2>Uma base de conhecimento centralizada</h2><pre>             CONHECIMENTO
-                   │
-        ┌──────────┼──────────┐
-        ↓          ↓          ↓
-   Constitution  Skills    Contexto
-        │          │          │
-        └──────────┼──────────┘
-                   ↓
-          Base de conhecimento</pre><p>Disponível quando necessário.</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Um exemplo</div><h2>AI Toolbox</h2><p class="big">Uma infraestrutura reutilizável para organizar e disponibilizar conhecimento aos agentes.</p><p>Constituições · Instructions · Skills · Agents · Contexto · Conhecimento técnico</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como o agente acessa essas fontes?</div><h2>MCP</h2><pre>                    AGENTE
-                       │
-                    Harness
-                       │
-             ┌─────────┼─────────┐
-             ↓         ↓         ↓
-            MCP       MCP       MCP
-             │         │         │
-          Figma      Jira    AI Toolbox
-             │         │         │
-             ↓         ↓         ↓
-          Design    Trabalho  Conhecimento</pre><p><strong>MCP conecta o agente às ferramentas e fontes que ele precisa usar.</strong></p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Uma distinção importante</div><h2>Conhecimento ≠ interface</h2><div class="grid"><div class="card"><strong>Fonte</strong><p>Figma · Jira · GitHub · AI Toolbox · Banco de dados</p></div><div class="card"><strong>Interface</strong><p>MCP permite que o agente converse com essas fontes.</p></div></div><p class="big">A Toolbox é um exemplo. O conceito funciona sem ela.</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Com o que eu consigo trabalhar?</div><h2>Harness</h2><pre>             Harness
-                │
-      ┌─────────┼─────────┐
-      ↓         ↓         ↓
-    Código    GitHub    Testes
-      ↓         ↓         ↓
-     API      Issues   Pipeline</pre></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como sei que funcionou?</div><h2>Loop de execução</h2><pre>OBSERVE
+<div class="deck" id="deck">
+<section class="slide active" data-section="01 · O problema"><div class="content hero"><div><div class="eyebrow">Agentic Engineering Workshop</div><h1>De Principal Engineer a<br><span class="accent">Orquestrador de Agentes</span></h1><p class="lead">Não é sobre escrever prompts melhores. É sobre organizar trabalho melhor.</p></div><div class="hero-art"><div class="terminal"><b>$ mission</b><br><i>create user registration</i><br><br>observe → think → act<br>verify → evidence → done</div><div class="person"><div class="hair"></div><div class="head"><div class="glasses"><i></i></div></div><div class="body"></div></div></div></div></section>
+<section class="slide" data-section="01 · O problema"><div class="content"><div class="eyebrow">Segunda-feira · 09:07</div><h2>“Precisamos criar um cadastro de usuários.”</h2><div class="quote">E agora?</div><p>O código ainda nem começou. O problema real é descobrir o que essa frase significa.</p></div></section>
+<section class="slide" data-section="01 · O problema"><div class="content"><div class="eyebrow">Antes de executar</div><h2>Uma tarefa pequena pode esconder um sistema inteiro.</h2><div class="grid"><div class="card"><strong>Produto</strong><p>Quem cria? Para quê? Qual jornada?</p></div><div class="card"><strong>Domínio</strong><p>Quais dados? Regras? Estados?</p></div><div class="card"><strong>Tecnologia</strong><p>Onde entra? O que já existe?</p></div><div class="card"><strong>Qualidade</strong><p>Como saberemos que está correto?</p></div></div></div></section>
+<section class="slide" data-section="02 · Orientação"><div class="content"><div class="eyebrow">Nível 0 · Princípios</div><h2>Constitution</h2><p class="lead">O que é importante mesmo quando ninguém está olhando.</p><div class="flow"><div class="node">Princípios</div><div class="arrow">→</div><div class="node">Valores</div><div class="arrow">→</div><div class="node">Trade-offs</div><div class="arrow">→</div><div class="node">Limites</div></div><p class="kicker">Não é backlog. Não é tutorial. Não é documentação infinita.</p></div></section>
+<section class="slide" data-section="02 · Orientação"><div class="content"><div class="eyebrow">Nível 1 · Como trabalhamos</div><h2>Instructions</h2><div class="grid"><div class="card"><strong>Definem</strong><p>Padrões, convenções, regras e restrições.</p></div><div class="card"><strong>Protegem</strong><p>Decisões já tomadas e comportamentos esperados.</p></div></div><p class="kicker">Uma instruction boa reduz decisões repetitivas sem esconder o contexto.</p></div></section>
+<section class="slide" data-section="02 · Orientação"><div class="content"><div class="eyebrow">Nível 1 · Execução recorrente</div><h2>Skills</h2><p class="formula"><span>Conhecimento</span> → procedimento reutilizável → <span>execução</span></p><div class="grid"><div class="card"><strong>Exemplo</strong><p>Criar endpoint Spring com observabilidade, timeout, retry e testes.</p></div><div class="card"><strong>Resultado</strong><p>O agente não precisa reinventar o caminho a cada missão.</p></div></div></div></section>
+<section class="slide" data-section="02 · Orientação"><div class="content"><div class="eyebrow">Nível 2 · O mundo real</div><h2>Context</h2><p class="lead">O trabalho precisa saber onde está pisando.</p><div class="flow"><div class="node">Produto</div><div class="arrow">→</div><div class="node">Sistema</div><div class="arrow">→</div><div class="node">Arquitetura</div><div class="arrow">→</div><div class="node">Cadastro</div><div class="arrow">→</div><div class="node">Usuário</div></div><p class="kicker">O que existe? Por que fazer? Quem é afetado? Quais restrições?</p></div></section>
+<section class="slide" data-section="02 · Orientação"><div class="content"><div class="eyebrow">Nível 2 · O contrato de execução</div><h2>Mission</h2><p class="formula"><span>Contexto</span> + <span>Objetivo</span> + Restrições + <span>Critérios de aceite</span></p><p class="lead">Uma missão boa deixa claro o resultado. Não precisa ditar cada passo.</p></div></section>
+<section class="slide" data-section="03 · Conhecimento"><div class="content"><div class="eyebrow">A pergunta inevitável</div><h2>“Preciso lembrar tudo isso sozinho toda vez?”</h2><p class="lead">Não. O sistema precisa lembrar por nós.</p><div class="flow"><div class="node">Conhecimento</div><div class="arrow">→</div><div class="node">Disponível sob demanda</div><div class="arrow">→</div><div class="node">Menos contexto perdido</div></div></div></section>
+<section class="slide" data-section="03 · Conhecimento"><div class="content"><div class="eyebrow">Infraestrutura</div><h2>Base de conhecimento</h2><pre>                     CONHECIMENTO
+                          │
+             ┌────────────┼────────────┐
+             ↓            ↓            ↓
+       Constitution     Skills       Contexto
+             │            │            │
+             └────────────┼────────────┘
+                          ↓
+                  disponível ao agente</pre><p>O objetivo não é criar um arquivo gigante. É tornar conhecimento encontrável e utilizável.</p></div></section>
+<section class="slide" data-section="03 · Conhecimento"><div class="content"><div class="eyebrow">Um exemplo do nosso ecossistema</div><h2>AI Toolbox</h2><p class="lead">Uma infraestrutura reutilizável para organizar e disponibilizar conhecimento aos agentes.</p><div><span class="tag">Constitution</span><span class="tag">Instructions</span><span class="tag">Skills</span><span class="tag">Agents</span><span class="tag">Context</span><span class="tag">Conhecimento técnico</span></div><p class="kicker">Importante: a Toolbox é um exemplo. O conceito é maior que a ferramenta.</p></div></section>
+<section class="slide" data-section="04 · Conexão"><div class="content"><div class="eyebrow">Conhecimento ≠ interface</div><h2>MCP</h2><pre>                         AGENTE
+                            │
+                         HARNESS
+                            │
+              ┌─────────────┼─────────────┐
+              ↓             ↓             ↓
+             MCP           MCP           MCP
+              │             │             │
+            Figma          Jira       AI Toolbox
+              ↓             ↓             ↓
+           Design       Trabalho     Conhecimento</pre><p class="lead">MCP é a ponte entre o agente e as fontes/ferramentas que ele precisa usar.</p></div></section>
+<section class="slide" data-section="04 · Conexão"><div class="content"><div class="eyebrow">Outra peça do sistema</div><h2>Harness</h2><p class="lead">O agente precisa de um ambiente onde possa observar, agir e verificar.</p><div class="grid"><div class="card"><strong>Artefatos</strong><p>Código · GitHub · arquivos · configuração</p></div><div class="card"><strong>Feedback</strong><p>Testes · APIs · logs · pipeline · issues</p></div></div><div class="flow"><div class="node">Agente</div><div class="arrow">→</div><div class="node">Harness</div><div class="arrow">→</div><div class="node">Mundo real</div></div></div></section>
+<section class="slide" data-section="04 · Conexão"><div class="content"><div class="eyebrow">O agente não “pensa e pronto”</div><h2>Loop de execução</h2><pre>OBSERVE
    ↓
 THINK
    ↓
 ACT
    ↓
 VERIFY
-   ├── OK → DONE
-   └── ERRO → CORRIGE → OBSERVE</pre></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">O problema ficou grande</div><h2>“E se ficar grande demais pra fazer sozinho?”</h2><p>“Dá pra dividir? Ou, se eu não souber alguma coisa, posso pedir ajuda?”</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Responsabilidades</div><h2>Agentes</h2><pre>             Engenheiro
-                  │
-       ┌──────────┼──────────┐
-       ↓          ↓          ↓
-    Backend    Security    Tests</pre><p>Um agente assume uma responsabilidade.</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Como dividir?</div><h2>Decomposição e delegação</h2><p class="big">Objetivo → Resultados → Responsabilidades → Dependências → Missões → Evidências</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Paralelismo</div><h2>Nem todo trabalho precisa ser paralelo.</h2><pre>Descobrir contexto
-   ├──→ Segurança
-   ├──→ Testes
-   └──→ Arquitetura
+   ├── OK ─────────────→ DONE
+   └── ERRO → CORRECT → OBSERVE</pre><p>O harness fornece os sentidos e as mãos. A evidência fecha o ciclo.</p></div></section>
+<section class="slide" data-section="05 · Agentes"><div class="content"><div class="eyebrow">Quando o problema cresce</div><h2>“E se ficar grande demais para fazer sozinho?”</h2><p class="lead">Então paramos de pensar em uma conversa e começamos a pensar em uma equipe.</p></div></section>
+<section class="slide" data-section="05 · Agentes"><div class="content"><div class="eyebrow">A equipe</div><h2>Responsabilidade antes de personalidade.</h2><div class="character-row"><div class="card char"><span class="spark">01</span><div class="avatar"></div><h3>Cora Cronograma</h3><small>Organiza dependências, backlog e integridade do plano.</small></div><div class="card char"><span class="spark">02</span><div class="avatar"></div><h3>Pedro Produteiro</h3><small>Traduz intenção de negócio em resultado que pode ser entregue.</small></div><div class="card char"><span class="spark">03</span><div class="avatar"></div><h3>Manuela Faz-Telas</h3><small>Transforma experiência e interface em decisões concretas.</small></div></div></div></section>
+<section class="slide" data-section="05 · Agentes"><div class="content"><div class="eyebrow">Especialização</div><h2>Agentes assumem responsabilidades.</h2><pre>                       OBJETIVO
+                          │
+              ┌───────────┼───────────┐
+              ↓           ↓           ↓
+           Backend     Security      Tests
+              │           │           │
+              └───────────┼───────────┘
+                          ↓
+                    resultado integrado</pre></div></section>
+<section class="slide" data-section="06 · Orquestração"><div class="content"><div class="eyebrow">O trabalho do arquiteto</div><h2>Decomposição e delegação</h2><p class="formula"><span>Objetivo</span> → Resultados → Responsabilidades → Dependências → Missões → <span>Evidências</span></p><p class="kicker">Delegar não é distribuir tarefas. É distribuir contexto, responsabilidade e critérios de sucesso.</p></div></section>
+<section class="slide" data-section="06 · Orquestração"><div class="content"><div class="eyebrow">Paralelismo com propósito</div><h2>Nem tudo precisa ser paralelo.</h2><pre>descobrir contexto
+   ├──→ segurança
+   ├──→ testes
+   └──→ arquitetura
+             │
              ↓
       decisão arquitetural
+             │
              ↓
        implementação
-         ├──→ testes
-         └──→ revisão
+          ├──→ testes
+          └──→ revisão
+             │
              ↓
-          integração</pre></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Colaboração</div><h2>Agentes conversam</h2><div class="grid"><div class="card">Backend<br><small>“Contrato pronto.”</small></div><div class="card">Security<br><small>“Tenho uma restrição.”</small></div><div class="card">Tests<br><small>“Encontrei um caso não coberto.”</small></div><div class="card"><strong>Agentes podem revisar o trabalho de outros agentes.</strong></div></div></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Confiabilidade</div><h2>“Como eu sei que posso confiar nisso?”</h2><p class="big">Código → Testes → Validações → Review → Evidências</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">A revelação</div><h1>“Crie um cadastro de usuários.”</h1><p class="big">A tarefa não mudou.</p></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">O que mudou?</div><pre>              OBJETIVO
-                  │
-        ┌─────────┴─────────┐
-        │                   │
-  Constitution           Context
-        │                   │
- Instructions           Mission
-        │                   │
-      Skills             Harness
-        └─────────┬─────────┘
-                  ↓
-               Agentes
-                  ↓
-              Delegação
-                  ↓
-           Loop + Evidência
-                  ↓
-               Entrega</pre></div></section>
-<section class="slide"><div class="content"><div class="eyebrow">Fechamento</div><h2>Da próxima vez que receber uma tarefa...</h2><p>“Como faço isso?”</p><p>↓</p><p class="big"><strong>“Como organizo esse trabalho para que humanos e agentes produzam o melhor resultado?”</strong></p></div></section>
-</main>
-<div class="counter" id="counter"></div><div class="hint">← → · espaço · swipe</div>
+          integração</pre><p>Paralelizar cedo demais também é uma forma de criar retrabalho.</p></div></section>
+<section class="slide" data-section="06 · Orquestração"><div class="content"><div class="eyebrow">A equipe deixa de ser silenciosa</div><h2>Agentes colaboram.</h2><div class="grid"><div class="card"><strong>Backend</strong><p>“Contrato pronto.”</p></div><div class="card"><strong>Security</strong><p>“Tenho uma restrição.”</p></div><div class="card"><strong>Tests</strong><p>“Encontrei um caso não coberto.”</p></div><div class="card"><strong>Review</strong><p>“A implementação funciona, mas a decisão arquitetural precisa mudar.”</p></div></div></div></section>
+<section class="slide" data-section="07 · Evidência"><div class="content"><div class="eyebrow">A pergunta que continua humana</div><h2>“Como eu sei que posso confiar nisso?”</h2><div class="flow"><div class="node">Código</div><div class="arrow">→</div><div class="node">Testes</div><div class="arrow">→</div><div class="node">Validações</div><div class="arrow">→</div><div class="node">Review</div><div class="arrow">→</div><div class="node">Evidências</div></div><p class="lead" style="margin-top:2rem">O humano não precisa observar cada tecla. Precisa conseguir julgar o resultado.</p></div></section>
+<section class="slide" data-section="08 · Revelação"><div class="content"><div class="eyebrow">A revelação</div><h1>“Crie um cadastro de usuários.”</h1><p class="lead">A tarefa não mudou.</p></div></section>
+<section class="slide" data-section="08 · Revelação"><div class="content"><div class="eyebrow">O que mudou?</div><div class="timeline"><div class="step"><b>01 · OBJETIVO</b><span>O resultado que queremos.</span></div><div class="step"><b>02 · CONSTITUTION + CONTEXT</b><span>Como decidimos e onde estamos.</span></div><div class="step"><b>03 · INSTRUCTIONS + MISSION</b><span>Como trabalhar e o que entregar.</span></div><div class="step"><b>04 · SKILLS + HARNESS</b><span>Como executar e verificar.</span></div><div class="step"><b>05 · AGENTES + DELEGAÇÃO</b><span>Quem assume cada responsabilidade.</span></div><div class="step"><b>06 · LOOP + EVIDÊNCIA</b><span>Como sabemos que terminou bem.</span></div></div></div></section>
+<section class="slide" data-section="09 · Novo papel"><div class="content"><div class="eyebrow">A mudança de papel</div><h2>Antes</h2><p class="lead">“Como faço esta tarefa?”</p><h2 style="margin-top:2rem">Depois</h2><p class="lead lime">“Como organizo este trabalho para que humanos e agentes produzam o melhor resultado?”</p></div></section>
+<section class="slide" data-section="09 · Novo papel"><div class="content"><div class="eyebrow">Principal Engineer → Orquestrador</div><h2>Seu trabalho não desaparece. Ele sobe de nível.</h2><div class="grid"><div class="card"><strong>Definir</strong><p>Objetivos, fronteiras e critérios de sucesso.</p></div><div class="card"><strong>Arquitetar</strong><p>Dependências, decisões e decomposição.</p></div><div class="card"><strong>Revisar</strong><p>Qualidade, riscos, trade-offs e evidências.</p></div><div class="card"><strong>Integrar</strong><p>Transformar trabalhos independentes em um sistema coerente.</p></div></div></div></section>
+<section class="slide" data-section="10 · Fechamento"><div class="content"><div class="eyebrow">Fechamento</div><h1>Não é uma fábrica de prompts.</h1><p class="lead" style="margin-top:2rem">É uma fábrica de trabalho bem organizado.</p><div class="quote">Bons objetivos → bons contextos → boas missões → bons agentes → boas evidências.</div></div></section>
+<section class="slide" data-section="10 · Fechamento"><div class="content"><div class="eyebrow">A pergunta para levar daqui</div><h2>Na próxima tarefa, antes de perguntar “como faço?”...</h2><p class="lead lime">Pergunte:</p><h2>“Como devo organizar este trabalho para que humanos e agentes produzam o melhor resultado?”</h2></div></section>
+</div>
+<div class="section" id="section"></div><div class="logo">PDI · AGENTIC ENGINEERING WORKSHOP</div>
+<div class="footer"><div class="controls">← → · SPACE · HOME/END · F</div><div class="progress"><i id="bar"></i></div><div class="count" id="count">01 / 01</div></div>
 <script>
-const slides=[...document.querySelectorAll('.slide')];let current=0;
-function show(index){current=(index+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${current+1} / ${slides.length}`;}
-function next(){show(current+1)}function prev(){show(current-1)}
-document.addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}});
-let startX=0,startY=0,startTime=0;
-document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;const t=e.touches[0];startX=t.clientX;startY=t.clientY;startTime=Date.now()},{passive:true});
-document.addEventListener('touchend',e=>{if(!startTime||e.changedTouches.length!==1)return;const t=e.changedTouches[0],dx=t.clientX-startX,dy=t.clientY-startY,dt=Date.now()-startTime;startTime=0;if(dt>700||Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.25)return;if(dx<0)next();else prev();},{passive:true});
-show(0);
+const slides=[...document.querySelectorAll('.slide')],bar=document.getElementById('bar'),count=document.getElementById('count'),section=document.getElementById('section');let current=0,busy=false;
+function render(n,dir=1){if(busy)return;busy=true;n=Math.max(0,Math.min(slides.length-1,n));if(n===current){busy=false;return}const old=slides[current],next=slides[n];old.classList.remove('active');old.classList.add('exit');setTimeout(()=>old.classList.remove('exit'),240);next.classList.add('active');current=n;bar.style.width=((current+1)/slides.length*100)+'%';count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');section.textContent=next.dataset.section;setTimeout(()=>busy=false,260);history.replaceState(null,'','#'+(current+1));}
+function next(){render(current+1)}function prev(){render(current-1)}
+document.addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home'){e.preventDefault();render(0)}else if(e.key==='End'){e.preventDefault();render(slides.length-1)}else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()}});
+let sx=0,sy=0,st=0;document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;const t=e.touches[0];sx=t.clientX;sy=t.clientY;st=Date.now()},{passive:true});document.addEventListener('touchend',e=>{if(!st)return;const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;st=0;if(Date.now()-st>700||Math.abs(dx)<50||Math.abs(dx)<Math.abs(dy)*1.2)return;dx<0?next():prev()},{passive:true});
+let down=false;document.addEventListener('pointerdown',e=>{down=e.button===0});document.addEventListener('pointerup',e=>{if(!down)return;down=false;if(Math.abs(e.clientX-window.innerWidth/2)<80)return;e.clientX>window.innerWidth/2?next():prev()});
+const hash=parseInt(location.hash.slice(1),10);if(Number.isFinite(hash)&&hash>=1&&hash<=slides.length)current=hash-1;slides.forEach((s,i)=>s.classList.toggle('active',i===current));bar.style.width=((current+1)/slides.length*100)+'%';count.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');section.textContent=slides[current].dataset.section;
 </script>
 </body>
 </html>
