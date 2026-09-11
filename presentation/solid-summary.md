@@ -1,0 +1,1 @@
+Solid visual variant: warm editorial palette, restrained accent, solid cards, and full illustrated characters for Cora Cronograma, Pedro Produteiro and Manuela Faz-Telas.
