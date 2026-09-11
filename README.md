@@ -4,9 +4,11 @@ Workshop sobre a evolução de engenharia de software orientada a chat para enge
 
 ## Produto final
 
-A apresentação final está em [`presentation/index.html`](presentation/index.html).
+A apresentação final está em [`presentation/index-final.html`](presentation/index-final.html).
 
-Ela é autocontida, não depende de bibliotecas externas e foi pensada para apresentação em tela cheia, projetor, TV ou tablet.
+Ela usa uma linguagem visual solid/editorial e reintegra o elenco narrativo do workshop: Claudinho Código, Pietro Principal, Cora Cronograma, Pedro Produteiro, Manuela Faz-Telas, Fábio Firewall e Bruno Bugado.
+
+A apresentação é autocontida, não depende de bibliotecas externas e foi pensada para apresentação em tela cheia, projetor, TV ou tablet.
 
 ### Controles
 
@@ -20,6 +22,18 @@ Ela é autocontida, não depende de bibliotecas externas e foi pensada para apre
 
 O roteiro de apresentação está em [`presentation/speaker-notes.md`](presentation/speaker-notes.md).
 
+## Elenco
+
+- **Claudinho Código** — executor, curioso, técnico; conduz a jornada.
+- **Pietro Principal** — mentor arquitetural, sereno e questionador.
+- **Cora Cronograma** — planejamento, dependências e organização.
+- **Pedro Produteiro** — produto, resultado e provocação.
+- **Manuela Faz-Telas** — frontend, experiência e sensibilidade.
+- **Fábio Firewall** — segurança, risco e restrições.
+- **Bruno Bugado** — QA, investigação e validação.
+
+Os personagens aparecem como recortes narrativos, não como fichas ou mascotes. Os especialistas complementares entram quando a história chega à decomposição e ao trabalho em equipe.
+
 ## Ideia central
 
 O objetivo não é escrever mais prompts.
@@ -28,7 +42,7 @@ O objetivo não é escrever mais prompts.
 
 ## Estrutura
 
-- `presentation/` apresentação e roteiro do workshop
+- `presentation/` apresentação, personagens e roteiro
 - `content/` capítulos do workshop
 - `exercises/` exercícios práticos
 - `facilitator/` guia do facilitador e checklists
