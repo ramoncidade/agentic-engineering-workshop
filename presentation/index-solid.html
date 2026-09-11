@@ -1,0 +1,71 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agentic Engineering Workshop</title><style>:root{--bg:#f4f1ea;--paper:#fffdf8;--ink:#17202a;--muted:#68727c;--line:#d9d4ca;--accent:#c95745;--accent2:#31485c}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.deck{height:100vh;width:100vw}.slide{display:none;height:100vh;width:100vw;padding:7vh 8vw;align-items:center}.slide.active{display:flex}.content{width:min(1180px,100%);margin:auto}.ey{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1rem}.chapter{position:fixed;top:20px;left:24px;font-size:.72rem;color:var(--muted);z-index:3}.brand{position:fixed;top:20px;right:24px;font-size:.72rem;color:var(--muted);z-index:3}.counter{position:fixed;bottom:18px;right:24px;font-size:.72rem;color:var(--muted);z-index:3}.bar{position:fixed;bottom:0;left:0;height:4px;background:var(--accent);width:0;transition:.25s;z-index:4}h1{font-size:clamp(3.2rem,7vw,7.4rem);line-height:.94;letter-spacing:-.055em;margin:0;max-width:1000px}h2{font-size:clamp(2.4rem,5vw,5rem);line-height:.98;letter-spacing:-.045em;margin:0 0 1.6rem;max-width:1050px}p,li{font-size:clamp(1.05rem,1.7vw,1.45rem);line-height:1.5;color:#3e4852}.lead{font-size:clamp(1.45rem,2.8vw,2.5rem);line-height:1.22;color:var(--ink);max-width:950px}.quote{border-left:4px solid var(--accent);padding:.8rem 1.2rem;font-family:ui-monospace,monospace;font-size:clamp(1rem,1.8vw,1.55rem);background:#fffaf3;margin:1.5rem 0;max-width:900px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.3rem;box-shadow:0 8px 28px #2637460d}.card strong{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}.flow{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;margin:1.5rem 0}.node{padding:.7rem .9rem;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-family:ui-monospace,monospace;font-size:.85rem}.arrow{color:var(--accent);font-weight:700}.diagram{background:#18232e;color:#eef2f4;border-radius:18px;padding:1.5rem;font:clamp(.72rem,1.25vw,1rem)/1.6 ui-monospace,monospace;white-space:pre;overflow:auto}.art{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}.art img{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:0 18px 50px #26374618}.timeline{border-left:2px solid var(--line);padding-left:1.5rem}.step{margin:0 0 1rem}.step b{font:700 .75rem ui-monospace,monospace;color:var(--accent)}.step span{display:block;font-size:1.15rem;margin-top:.2rem}.beforeafter{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center}.beforeafter .big{font-size:clamp(1.5rem,3vw,2.8rem);font-weight:700}.center{color:var(--accent);font-size:2rem}@media(max-width:800px){.slide{padding:7vh 7vw}.grid,.art,.beforeafter{grid-template-columns:1fr}.art img{max-height:42vh;object-fit:cover}.brand{display:none}h1{font-size:clamp(2.8rem,12vw,5rem)}h2{font-size:clamp(2.2rem,10vw,4rem)}.diagram{font-size:.68rem}}@media print{.slide,.slide.active{display:flex;page-break-after:always}.chapter,.brand,.counter,.bar{display:none}}
+</style></head><body><main class="deck">
+<section class="slide active"><div class="content"><div class="ey">Agentic Engineering Workshop</div><h1>De Principal Engineer a<br><span style="color:var(--accent)">Orquestrador de Agentes</span></h1><p class="lead">Não é sobre escrever prompts melhores. É sobre organizar trabalho melhor.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">Segunda-feira · 09:07</div><h2>“Precisamos criar um cadastro de usuários.”</h2><div class="quote">E agora?</div><p>Antes de escrever uma linha de código, já existem perguntas de produto, domínio, arquitetura e qualidade.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">A falsa simplicidade</div><h2>Uma tarefa pequena pode esconder um sistema inteiro.</h2><div class="grid"><div class="card"><strong>Produto</strong><p>Quem cria? Para quê? Qual jornada?</p></div><div class="card"><strong>Domínio</strong><p>Quais dados? Regras? Estados?</p></div><div class="card"><strong>Tecnologia</strong><p>Onde entra? O que já existe?</p></div><div class="card"><strong>Qualidade</strong><p>Como sabemos que está correto?</p></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">01 · Orientação</div><h2>Constitution</h2><p class="lead">Princípios, valores, trade-offs e limites que continuam válidos quando a tarefa muda.</p><div class="flow"><span class="node">Princípios</span><span class="arrow">→</span><span class="node">Valores</span><span class="arrow">→</span><span class="node">Trade-offs</span><span class="arrow">→</span><span class="node">Limites</span></div></div></section>
+<section class="slide"><div class="content"><div class="ey">02 · Orientação</div><h2>Instructions</h2><p class="lead">Padrões e regras que reduzem decisões repetitivas sem esconder o contexto.</p><div class="grid"><div class="card"><strong>É</strong><p>Convenção · padrão · regra · restrição</p></div><div class="card"><strong>Não é</strong><p>Objetivo · conhecimento genérico · missão</p></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">03 · Execução</div><h2>Skills</h2><p class="lead">Conhecimento → procedimento reutilizável → execução.</p><p>Uma skill boa evita que cada agente reinvente o caminho para uma atividade recorrente.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">04 · Contexto</div><h2>Context</h2><div class="flow"><span class="node">Produto</span><span class="arrow">→</span><span class="node">Sistema</span><span class="arrow">→</span><span class="node">Arquitetura</span><span class="arrow">→</span><span class="node">Cadastro</span><span class="arrow">→</span><span class="node">Usuário</span></div><p>O que existe? Por que fazer? Quem é afetado? Quais restrições?</p></div></section>
+<section class="slide"><div class="content"><div class="ey">05 · Contrato</div><h2>Mission</h2><p class="lead">Contexto + Objetivo + Restrições + Critérios de aceite.</p><p>Uma missão define o resultado esperado sem precisar ditar cada tecla.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">06 · Conhecimento</div><h2>“Preciso lembrar tudo isso sozinho?”</h2><p class="lead">Não. O sistema precisa lembrar por nós.</p><div class="diagram">CONHECIMENTO
+     │
+ ┌───┼────┐
+ ↓   ↓    ↓
+CON  SKILL CONTEXT
+ └───┼────┘
+     ↓
+ disponível ao agente</div></div></section>
+<section class="slide"><div class="content"><div class="ey">07 · Um exemplo</div><h2>AI Toolbox</h2><p class="lead">Uma infraestrutura para organizar e disponibilizar conhecimento aos agentes.</p><div><span class="node">Constitution</span> <span class="node">Instructions</span> <span class="node">Skills</span> <span class="node">Agents</span> <span class="node">Context</span></div><p>Exemplo, não protagonista. O conceito é maior que a ferramenta.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">08 · Conexão</div><h2>MCP</h2><div class="diagram">             AGENTE
+                │
+             HARNESS
+                │
+       ┌────────┼────────┐
+       ↓        ↓        ↓
+      MCP      MCP      MCP
+       │        │        │
+     Figma     Jira  AI Toolbox</div><p class="lead">MCP conecta o agente às fontes e ferramentas que ele precisa usar.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">09 · Execução</div><h2>Harness</h2><p class="lead">O ambiente onde o agente consegue observar, agir e verificar.</p><div class="grid"><div class="card"><strong>Artefatos</strong><p>Código · GitHub · arquivos · configuração</p></div><div class="card"><strong>Feedback</strong><p>Testes · APIs · logs · pipeline · issues</p></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">10 · Loop</div><h2>Observe → Think → Act → Verify</h2><div class="diagram">OBSERVE
+   ↓
+THINK
+   ↓
+ACT
+   ↓
+VERIFY ── OK ──→ DONE
+   │
+ ERRO
+   ↓
+CORRECT ───────→ OBSERVE</div><p>Sem verificação, “terminou” é apenas uma opinião.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">11 · Equipe</div><h2>Quando o problema cresce, aparece uma equipe.</h2><p class="lead">Responsabilidade antes de personalidade.</p></div></section>
+<section class="slide"><div class="content art"><div><div class="ey">12 · Personagens</div><h2>Uma equipe com papéis diferentes.</h2><p>Cora cuida do plano. Pedro conecta necessidade a resultado. Manuela transforma experiência em interface.</p><p>Os personagens representam responsabilidades, não mascotes.</p></div><img src="characters.svg" alt="Cora Cronograma, Pedro Produteiro e Manuela Faz-Telas"></div></section>
+<section class="slide"><div class="content"><div class="ey">13 · Especialização</div><h2>Agentes assumem responsabilidades.</h2><div class="diagram">                 OBJETIVO
+                    │
+        ┌───────────┼───────────┐
+        ↓           ↓           ↓
+     Backend      Security     Tests
+        │           │           │
+        └───────────┼───────────┘
+                    ↓
+              resultado integrado</div></div></section>
+<section class="slide"><div class="content"><div class="ey">14 · Orquestração</div><h2>Decomposição e delegação</h2><p class="lead">Objetivo → Resultados → Responsabilidades → Dependências → Missões → Evidências</p><p>Delegar não é distribuir tarefas. É distribuir contexto, responsabilidade e critérios de sucesso.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">15 · Paralelismo</div><h2>Nem tudo precisa ser paralelo.</h2><div class="diagram">descoberta
+ ├─→ segurança
+ ├─→ testes
+ └─→ arquitetura
+        ↓
+ decisão arquitetural
+        ↓
+ implementação
+    ├─→ testes
+    └─→ revisão
+        ↓
+     integração</div><p>Paralelizar cedo demais também cria retrabalho.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">16 · Colaboração</div><h2>Agentes podem revisar agentes.</h2><div class="grid"><div class="card"><strong>Backend</strong><p>“Contrato pronto.”</p></div><div class="card"><strong>Security</strong><p>“Tenho uma restrição.”</p></div><div class="card"><strong>Tests</strong><p>“Encontrei um caso não coberto.”</p></div><div class="card"><strong>Review</strong><p>“Funciona, mas a decisão arquitetural precisa mudar.”</p></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">17 · Evidência</div><h2>Como eu sei que posso confiar?</h2><div class="flow"><span class="node">Código</span><span class="arrow">→</span><span class="node">Testes</span><span class="arrow">→</span><span class="node">Validações</span><span class="arrow">→</span><span class="node">Review</span><span class="arrow">→</span><span class="node">Evidências</span></div><p class="lead">O humano não precisa observar cada tecla. Precisa conseguir julgar o resultado.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">18 · Revelação</div><h1>“Crie um cadastro de usuários.”</h1><p class="lead">A tarefa não mudou.</p></div></section>
+<section class="slide"><div class="content"><div class="ey">19 · O que mudou?</div><div class="timeline"><div class="step"><b>01 · OBJETIVO</b><span>O resultado que queremos.</span></div><div class="step"><b>02 · CONTEXTO + CONSTITUTION</b><span>Onde estamos e como decidimos.</span></div><div class="step"><b>03 · MISSION + INSTRUCTIONS</b><span>O que entregar e como trabalhar.</span></div><div class="step"><b>04 · SKILLS + HARNESS</b><span>Como executar e verificar.</span></div><div class="step"><b>05 · AGENTES + DELEGAÇÃO</b><span>Quem assume cada responsabilidade.</span></div><div class="step"><b>06 · LOOP + EVIDÊNCIA</b><span>Como sabemos que terminou bem.</span></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">20 · Novo papel</div><div class="beforeafter"><div><div class="ey">Antes</div><div class="big">“Como faço esta tarefa?”</div></div><div class="center">→</div><div><div class="ey">Depois</div><div class="big">“Como organizo este trabalho para que humanos e agentes produzam o melhor resultado?”</div></div></div></div></section>
+<section class="slide"><div class="content"><div class="ey">21 · Fechamento</div><h2>Seu trabalho não desaparece.<br><span style="color:var(--accent)">Ele sobe de nível.</span></h2><p class="lead">Definir. Arquitetar. Priorizar. Revisar. Integrar.</p><div class="quote">O agente não é o produto. A mudança é no sistema de trabalho do engenheiro.</div></div></section>
+</main><div class="chapter" id="chapter"></div><div class="brand">PDI · AGENTIC ENGINEERING WORKSHOP</div><div class="counter" id="counter"></div><div class="bar" id="bar"></div><script>const s=[...document.querySelectorAll('.slide')],c=document.getElementById('counter'),b=document.getElementById('bar'),ch=document.getElementById('chapter');let i=0;function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach((x,k)=>x.classList.toggle('active',k===i));c.textContent=String(i+1).padStart(2,'0')+' / '+String(s.length).padStart(2,'0');b.style.width=((i+1)/s.length*100)+'%';ch.textContent=s[i].querySelector('.ey')?.textContent||'';location.hash=i+1}document.onkeydown=e=>{if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();go(i+1)}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(i-1)}if(e.key==='Home')go(0);if(e.key==='End')go(s.length-1);if(e.key.toLowerCase()==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.()}};let x=0;document.addEventListener('touchstart',e=>x=e.touches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{let d=e.changedTouches[0].clientX-x;if(Math.abs(d)>50)go(i+(d<0?1:-1))},{passive:true});let h=parseInt(location.hash.slice(1));go(Number.isFinite(h)?h-1:0)</script></body></html>
