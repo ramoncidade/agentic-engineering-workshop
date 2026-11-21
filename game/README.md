@@ -33,6 +33,6 @@ npm run preview
 ## Personagem
 
 O spritesheet está em `public/assets/characters/claudinho-spritesheet.svg`.
-Cada frame mede 96×96 pixels. A primeira linha lógica de frames representa idle e a segunda, caminhada (quatro frames por animação).
+Cada frame mede 96×96 pixels. Os frames estão organizados em uma única faixa horizontal: 0–3 para idle e 4–7 para caminhada.
 
 O sprite é uma primeira interpretação em pixel art do Claudinho. A arte vetorial original da apresentação permanece intacta.
