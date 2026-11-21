@@ -1,6 +1,6 @@
 # Agentic Engineering Workshop Game
 
-Primeiro protótipo educativo point-and-click, construído diretamente com Phaser 3 e TypeScript.
+Primeiro protótipo educativo point-and-click, construído com Phaser 3 e TypeScript.
 
 ## Requisitos
 
@@ -21,11 +21,18 @@ npm run build
 npm run preview
 ```
 
-## Escopo atual
+## Protótipo atual
 
-- Uma cena: laboratório.
-- Três hotspots: armário, bancada e computador.
-- Destaque visual ao passar o ponteiro.
-- Diálogo contextual com botão para fechar e tecla Escape.
+- Cena de laboratório com três hotspots: armário, bancada e computador.
+- Claudinho em pixel art, com spritesheet SVG de 8 frames.
+- Animação idle (frames 0–3) e caminhada (frames 4–7).
+- Movimento horizontal com setas ou teclas A/D.
+- Diálogos contextuais com botão para fechar ou tecla Escape.
+- Destaque visual dos objetos ao passar o ponteiro.
 
-Os desenhos atuais são placeholders feitos com primitivas do Phaser. Os sprites definitivos serão adicionados em uma próxima etapa, preservando os arquivos da apresentação.
+## Personagem
+
+O spritesheet está em `public/assets/characters/claudinho-spritesheet.svg`.
+Cada frame mede 96×96 pixels. A primeira linha lógica de frames representa idle e a segunda, caminhada (quatro frames por animação).
+
+O sprite é uma primeira interpretação em pixel art do Claudinho. A arte vetorial original da apresentação permanece intacta.
